@@ -199,6 +199,14 @@
 .meeting_cat>a:hover{
     color: #1067C8 !important;
 }
+.load_more{
+	width:100%;
+	text-align:center;
+	height:40px;line-height:40px;overflow:hidden;
+}
+.load_more a{
+	cursor: pointer;
+}
 .choose{
     color: #1067C8 !important;
 }

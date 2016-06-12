@@ -107,6 +107,10 @@ $(".erweima").hover(function () {
     },
     function () {
         $(".kefu").hide()
-    })
+    });
+$(".load_more a").click(function(){
+	$("#loadMore").fadeIn() ;
+	$("#loadMore2").fadeIn() ;
+})
 
 
