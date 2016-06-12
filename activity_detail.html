@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+	<link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./static/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./static/css/base.css">
+	<link rel="stylesheet" href="./static/css/detail_activity.css"/>
+	<script src="./static/js/com.js"></script>
+  </head>
+  <body>
+
+    <script>util.topnav();</script>
+
+	<div class="container content">
+		<ol class="breadcrumb">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="./find_activity.html">IT互联网</a></li>
+			<li class="active">活动XXX</li>
+			<span style="float: right;">发布时间：2016-06-11 14:23:45</span>
+		</ol>
+		<div class="activity_detail">
+
+			<span class="collect"><span class="fa fa-star"></span>收藏</span>
+
+			<div class="col-sm-5 col-xs-5 main_img">
+				<div id="carousel_top" class="carousel slide" data-ride="">
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="http://placehold.it/640x400?text=Activity" alt="Activity" />
+						</div>
+
+					</div>
+				</div>
+				<p title="2016活动，2016活动，2016活动">2016活动XXX介绍，2016活动XXX介绍，2016活动XXX介绍</p>
+			</div>
+			<div class="col-sm-7 col-xs-7 activity_price">
+				<h1>
+					<a >活动xxx</a>
+				</h1>
+				<p class="activity_tags">
+
+					<a href="">tag1</a>
+					<a href="">tag2</a>
+
+
+				</p>
+				<p class="activity_message">
+					<span>时间：</span>
+					2016-06-30 8:00至 2016-06-30 18:00结束
+					<!--<span class="dead">(2016-06-15报名截止)</span>-->
+					<br />
+					<span>地点：</span>
+					<font>北京海淀区中关村软件园‎ </font>
+					<span class="map">
+						<span class="glyphicon glyphicon-map-marker"></span>
+						<a onclick="Map('北京海淀区中关村软件园‎ ‎  上海龙之梦大酒店')">查看地图</a>
+					</span>
+					<br />
+					<span>价格：</span>
+					<b class="price">￥2000.00</b> <br />
+					<span style="float: left; margin-top: 13px">票种：</span>
+					<span style="display: inline-block; width: 80%">
+						<span class="ticket active" data-price="2000">优惠票</span>
+						<span class="ticket" data-price="2300">VIP票</span>
+					</span>
+					<br />
+					<span>数量：</span>
+					<input id="number" type="text" value="0" />
+					<span class="change_num">
+						<span class="add fa fa-angle-up"></span>
+						<span class="sub fa fa-angle-down"></span>
+					</span>
+					<br />
+				</p>
+				<p class="return ">
+					<span style="color: #BFC2D3">说明：</span> <span
+						style="width: 89%; font-size: 15px; min-height: 63px;" class='explain'> 说明说明说明说明，说明说明 </span>
+				</p>
+
+				<button type="button" id="apply">立即报名</button>
+
+			</div>
+			<div class="bdsharebuttonbox">
+				<span style="line-height: 2.6;margin-left:20px">分享:</span>
+				<a href="#" class="bds_tsina fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+				<a href="#" class="bds_sqq fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a>
+				<a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="分享到微信"></a>
+			</div>
+		</div>
+		
+		<div class="activity_content">
+			<div class="col-sm-9 col-xs-9 activity_left">
+				<ul class="title">
+					<li><span data-plne="meeting_1">活动通知</span></li>
+					<li><span data-plne="meeting_2">活动嘉宾</span></li>
+					<li><span data-plne="meeting_3">活动门票</span></li>
+
+				</ul>
+				
+				<div class="event">
+                    <div class="invitation">
+                        尊敬的参会嘉宾：<br/>
+                        <p class="share_text"style="text-indent: 2em">XXX诚邀您参加2016年06月XX日在XX举办的XXX创新大会。</p>
+                        <p class="text-right" style="margin: 15px 0 0">
+                    </div>
+                    
+                    <div class="meetingBgs"  id="meeting_1">
+                        <div class="meetingBgs_name">
+                            <h3>活动通知</h3>
+                        </div>
+						<div class="meeting_content">
+							<p>
+								<img alt="" src="http://placehold.it/673x336" />
+							</p>
+
+							<p>
+								活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍1
+							</p>
+							<p>
+								活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍1
+							</p>
+
+
+							<p>
+								<strong>活动议程设置</strong>
+							</p>
+
+							<p>xxx专题</p><p>xxx专题</p><p>xxx专题</p>
+
+
+							<p>
+								<strong>2016年6月30日 XXXX酒店</strong>
+							</p>
+
+							<p>9:00-17:30 xxxx</p>
+
+							<p>19:00-21:00 xxxx</p>
+
+							<p>
+								<strong>地址：上海市长宁区延安西路1116号</strong>
+							</p>
+						</div>
+
+
+						
+					</div>
+					
+					<div class="meetingBgs" style="display: none" id="meeting_2">
+                        <div class="meetingBgs_name" >
+                            <h3>活动嘉宾</h3>
+                        </div>
+						<div class="meeting_content">
+							<div class="gues_mes">
+                                <div class="gues_pic">
+                                    
+                                    <img alt="嘉宾" src=http://placehold.it/250x250 />
+                                                                    
+                                </div>
+                                <p>嘉宾</p>
+                                <p class="gues_company">嘉宾公司</p>
+                                <p class="gues_job">CEO</p>
+                            </div>
+                            <div class="gues_mes">
+                                <div class="gues_pic">
+                                    
+                                    <img alt="嘉宾" src=http://placehold.it/250x250 />
+                                                                    
+                                </div>
+                                <p>嘉宾</p>
+                                <p class="gues_company">嘉宾公司</p>
+                                <p class="gues_job">CEO</p>
+                            </div>
+                            <div class="gues_mes">
+                                <div class="gues_pic">
+                                    
+                                    <img alt="嘉宾" src=http://placehold.it/250x250 />
+                                                                    
+                                </div>
+                                <p>嘉宾</p>
+                                <p class="gues_company">嘉宾公司</p>
+                                <p class="gues_job">CEO</p>
+                            </div>
+							
+						</div>
+					</div>
+					
+					<div class="meetingBgs" style="display: none" id="meeting_3">
+                        <div class="meetingBgs_name" >
+                            <h3>活动门票</h3>
+                        </div>
+						<div class="meeting_content">
+							<p>
+								<strong>优惠票：</strong>优惠票（原价2888元） ￥2000.00 - 报名期：5/15 09:00~/6/15 23:00 说明：高峰论坛、展览互动区
+								、颁奖典礼、茶歇、资料速递
+							</p>
+
+							<p>
+								<strong>VIP票：</strong>优惠价（原价3888元） ￥2700.00 - 报名期：5/15 09:00~/6/15 23:00 说明：高峰论坛、展览互动区
+								、颁奖典礼、茶歇&amp;午餐、资料速递、前排就座
+							</p>
+
+							<p>
+								<strong>双人票：</strong>优惠价（原价4600元） ￥3200.00 - 报名期：5/15 09:00~/6/15 23:00 说明：高峰论坛、展览互动区
+								、颁奖典礼、茶歇、资料速递
+							</p>
+
+							
+						</div>
+					</div>
+				</div><!--  end event-->
+				<!-- user message -->
+				<div class="user_message">
+                    <h3>用户留言
+                        <!--快速登录：<a class="wx" href="">微信</a><a class="weibo" href="">微博</a><a class="QQ" href="">QQ</a></span>-->
+                        <span style="float: right;color: #DEDEDE;">还可以输入<font id="info" style="font-size: 16px">120</font>个字</span>
+                    </h3>
+                    <form class="publish" style="width: 100%;">
+                        <div id="result" style="display: none;"></div>
+                        <textarea class="emotion" rows="5" placeholder="说点什么..." ></textarea><br />
+                        <input class="analytic" type="button" value="留言" />
+                        <img  width="100" onclick="this.setAttribute('src','/get_check_code_image/?nocache='+Math.random());" src="http://placehold.it/100x35" alt="CheckCode" id="cap_img">
+                        <input  type="text" id="code" />
+                    </form>
+                    <p class="all_message">全部留言（1）</p>
+                    <div id="all_messages">
+                        
+                        <div class="message">
+                            <div class="message1 col-sm-12 col-xs-12">
+                                <div style="padding:0;" class="col-sm-1 col-xs-1">
+                                    <span class="fa fa-user fa-4x" style="color:grey"></span>
+                                    
+                                </div>
+                                <div  class="col-sm-11 col-xs-11 words">
+                                    <p><span>匿名用户</span>2016-06-09 10:05:57</p>
+                                    <p style="width: 80%;"> 中国活动在线网是一个提供举办活动所需的资源网，与文艺演出、巡演、会议、展会、拓展训练及企业培训、婚礼及各类型赛事活动等相关，查找全国活动资源。</p>
+                                    <p>
+                                    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        </div>
+                    <!--//验证码-->
+                    <!--<div class="model" style="position:absolute;width: 300px;height: 200px;background: #7a7a7a">-->
+                    <!--</div>-->
+                    <!-- -->
+                </div><!-- end message -->
+				<div class="related_activity">
+                    <p>你可能会关注</p>
+                    
+                    <div class="col-sm-3 col-xs-3">
+                        <a href="#" target="_blank">
+                            
+                            <img width="100%" src="http://placehold.it/640x400?text=Activity" alt="相关活动1"/>
+                            
+                        </a>
+                        <p><a style="color: #5A6070;" href="#" target="_blank">相关活动1</a></p>
+                        <p><span>上海</span><span style="float: right">2016-06-25</span></p>
+                    </div>
+                    
+                    <div class="col-sm-3 col-xs-3">
+                        <a href="#" target="_blank">
+                            
+                            <img width="100%" src="http://placehold.it/640x400?text=Activity" alt="相关活动1"/>
+                            
+                        </a>
+                        <p><a style="color: #5A6070;" href="#" target="_blank">相关活动1</a></p>
+                        <p><span>上海</span><span style="float: right">2016-06-25</span></p>
+                    </div>
+                    <div class="col-sm-3 col-xs-3">
+                        <a href="#" target="_blank">
+                            
+                            <img width="100%" src="http://placehold.it/640x400?text=Activity" alt="相关活动1"/>
+                            
+                        </a>
+                        <p><a style="color: #5A6070;" href="#" target="_blank">相关活动1</a></p>
+                        <p><span>上海</span><span style="float: right">2016-06-25</span></p>
+                    </div>
+                    
+                    
+                    
+                </div>
+				<!-- end 相关活动 -->
+				
+				
+			</div>
+			<!-- END LEFT -->
+			<div class="col-sm-3 col-xs-3 activity_right">
+				<div class="right_child" style="float: left">
+					<div class="activity_share text-center" style="padding:15px;">
+                        <p style="border: none;line-height: 24px">主办单位</p>
+                        
+                        
+                        <div class="logo"><a target="_blank"  href="./sponsor_detail.html">
+                            
+                            <img height="40" src="http://placehold.it/300x120" alt="主办单位XXX"/></a>
+                            
+                        </div>
+                        <p class="sponsor_des">主办单位XXX</p>
+                        <span class="attention" style="border-right: 1px solid #BDC3D3"><font>2</font><br/>活动数</span>
+                        <span class="attention"><font>0</font><br/>关注数</span>
+                        
+                        
+                    </div>
+					
+				</div>
+			
+			</div><!-- END RIGHT -->
+		</div>
+	</div><!-- end container -->
+	<div id="myAlert" class="alert alert-success alert_msg" style="">
+	   <a href="#" class="close" >&times;</a>
+	   <strong>收藏成功！</strong>
+	</div>
+	
+	<!-- footer html template -->
+	<script type="text/javascript">
+		util.footerhtml()
+	</script>
+
+	<script src="./static/js/jquery-1.12.4.min.js"></script>
+	<script src="./static/js/bootstrap.min.js"></script>
+	<script src="./static/js/jquery.lazyload.min.js"></script>
+	<script src="./static/js/detail_activity.js"></script>
+</body>
+</html>

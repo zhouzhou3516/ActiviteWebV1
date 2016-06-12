@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+	<link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./static/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./static/css/base.css">
+
+	<script src="./static/js/com.js"></script>
+    <style>
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .activity h3  {
+        display: inline;
+      }
+
+      .activity h4  {
+        display: inline;
+      }
+
+      .activity-hr {
+        margin-top: 0px;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+	<script>util.topnav();</script>
+
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="viewpoint_list.html">观点</a></li>
+        <li class="active">文章标题</li>
+      </ol>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">最新发布</button>
+        <button type="button" class="btn btn-default">最热点击</button>
+        <button type="button" class="btn btn-default">最多讨论</button>
+      </div>
+      <br/>
+
+      <div class="row">
+        <div class="col-sm-12">
+        <h4>医疗行业是中国移动互联网最后一个，也是最大的一个机会</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 text-muted">
+          <span class="glyphicon glyphicon-user"></span> 张文萱
+          <span class="glyphicon glyphicon-time"></span> 2016-06-05
+          <span class="glyphicon glyphicon-tags"></span> 医疗健康
+          <span class="glyphicon glyphicon-eye-open"></span> 164
+          <span class="glyphicon glyphicon-comment"></span> 0
+          <span class="glyphicon glyphicon-heart-empty"></span> 喜欢(1)
+        </div>
+      </div>
+      <div class="jumbotron">
+        <div style="height: 100px;"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="list-inline">
+            <li>标签：</li>
+            <li><a class="btn" href="">互联网</a></li>
+            <li><a class="btn" href="">分级诊疗</a></li>
+            <li><a class="btn" href="">创业创新</a></li>
+            <li><a class="btn" href="">医疗健康</a></li>
+            <li><a class="btn" href="">好人生</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <button class="btn btn-warning">
+            <span class="glyphicon glyphicon-thumbs-up"></span> 喜欢
+          </button>
+          <button class="btn btn-info">
+            <span class="glyphicon glyphicon-comment"></span> 发布评论
+          </button>
+        </div>
+        <div class="pull-right">
+          <a class="btn"><img src="http://placehold.it/30x30"></a>
+          <a class="btn"><img src="http://placehold.it/30x30"></a>
+          <a class="btn"><img src="http://placehold.it/30x30"></a>
+          <a class="btn"><img src="http://placehold.it/30x30"></a>
+          <a class="btn"><img src="http://placehold.it/30x30"></a>
+        </div>
+      </div>
+
+      <div class="well well-lg">
+        <img class="img-circle" src="http://placehold.it/50x50">
+        <span>张文萱</span>
+        <span> 182篇文章</span>
+        <button class="btn">站点</button>
+        <button class="btn">微博</button>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>相关文章</h3>
+          <ul>
+            <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
+            <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
+            <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
+            <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+   <!-- footer html template -->
+	<script type="text/javascript">
+		util.footerhtml()
+	</script>
+
+	<script src="./static/js/jquery-1.12.4.min.js"></script>
+	<script src="./static/js/bootstrap.min.js"></script>
+	<script src="./static/js/jquery.lazyload.min.js"></script>
+	<script src="./static/js/index.js"></script>
+</body>
+</html>

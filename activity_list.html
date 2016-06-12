@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+	<!--
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	-->
+    <style>
+      /* Add a gray background  color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+      }
+
+      footer ul li {
+        list-style: none;
+        line-height: 33px;
+        cursor: pointer;
+      }
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .activity h3  {
+        display: inline;
+      }
+
+      .activity h4  {
+        display: inline;
+      }
+
+      .activity-hr {
+        margin-top: 0px;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">公司名或Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href=“#”><span class="glyphicon glyphicon-map-marker"></span> 北京<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">上海</a></li>
+            <li><a href="#">成都</a></li>
+            <li><a href="#">深圳</a></li>
+            <li><a href="#">武汉</a></li>
+            <li class="divider"></li>
+            <li><a href="cities.html" target="_blank">更多&gt;&gt;</a></li>
+          </ul>
+          </li>
+          <li><a href="index.html">首页</a></li>
+          <li class="active"><a href="activities.html">找活动</a></li>
+          <li><a href="ongoing.html">活动进行时</a></li>
+          <li><a href="views.html">观点</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="输入您要找的活动关键字">
+            <a class="btn input-group-addon" href="search.html" type="submit"><span class="glyphicon glyphicon-search"></span></a>
+          </div>
+
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="posts.html"><span class="glyphicon glyphicon-pencil"></span> 发布活动</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">找活动</li>
+      </ol>
+    </div>
+    <div class="row text-center">
+      <h3>活动信息页面构建中。。。</h3>
+    </div>
+
+
+    <!--
+    <footer class="container-fluid text-center">
+    <div class="col-sm-2 col-xs-2">
+      <ul>
+        <li class="title"><h4>关于我们</h4></li>
+        <li><a href="#" rel="nofollow">公司简介</a></li>
+        <li><a href="#" rel="nofollow">媒体报道</a></li>
+        <li><a href="#" rel="nofollow">微信公众号</a></li>
+        <li><a href="#" rel="nofollow">APP下载</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-2 col-xs-2">
+      <ul>
+        <li class="title"><h4>更多服务</h4></li>
+        <li><a href="#" target="_blank" rel="nofollow">媒体合作</a></li>
+        <li><a href="#" target="_blank" rel="nofollow">商务合作</a></li>
+        <li><a href="#" target="_blank" rel="nofollow">友情链接</a></li>
+        <li><a href="#" target="_blank" rel="nofollow">在线留言</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4 col-xs-4">
+      <ul>
+        <li class="title"><h4>联系我们</h4></li>
+        <li><span class="glyphicon glyphicon-phone"></span> (+86)186-0000-0000</li>
+        <li><span class="glyphicon glyphicon-map-marker"></span> 北京市海淀区中关村软件园</li> 
+      </ul>
+    </div>
+    <div class="col-sm-2 col-xs-2">
+      <p>微信公众号</p>
+      <img width="100" src="http://placehold.it/180x180" alt=""/>
+      <p style="color: #A0A8B7;font-size: 12px;padding: 5px">精彩活动及时推送<br/>查询更方便</p>
+    </div>
+    <div class="col-sm-2 col-xs-2">
+      <p>APP下载</p>
+      <img width="100" src="http://placehold.it/180x180" alt=""/>
+      <p style="color: #A0A8B7;font-size: 12px;padding: 5px">下载手机端APP<br/>随时随地报名参会</p>
+    </div>
+    </footer>
+    -->
+    <footer class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 col-xs-4">
+        <ul>
+          <li class="title"><h4>关于我们</h4></li>
+          <li><a href="#" rel="nofollow">公司简介</a></li>
+          <li><a href="#" rel="nofollow">媒体报道</a></li>
+          <li><a href="#" rel="nofollow">微信公众号</a></li>
+          <li><a href="#" rel="nofollow">APP下载</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <ul>
+          <li class="title"><h4>更多服务</h4></li>
+          <li><a href="#" target="_blank" rel="nofollow">媒体合作</a></li>
+          <li><a href="#" target="_blank" rel="nofollow">商务合作</a></li>
+          <li><a href="#" target="_blank" rel="nofollow">友情链接</a></li>
+          <li><a href="#" target="_blank" rel="nofollow">在线留言</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <ul>
+          <li class="title"><h4>联系我们</h4></li>
+          <li><span class="glyphicon glyphicon-phone"></span> (+86)186-0000-0000</li>
+          <li><span class="glyphicon glyphicon-map-marker"></span> 北京市海淀区中关村软件园</li> 
+        </ul>
+      </div>
+    </div>
+
+    </footer><div class="row" style="background-color: gray;">
+    <p class="text-center">&copy; 2016~2017, Co. Ltd 备案相关信息.</p>
+  </div>
+</body>
+</html>

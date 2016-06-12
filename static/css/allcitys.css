@@ -1,0 +1,470 @@
+@CHARSET "UTF-8";
+body {
+	font-size: 10pt;
+	font-size: 10pt ; 
+} 
+
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form,
+	fieldset, input, textarea, blockquote, strong {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+table {
+	margin: 0 auto;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333
+}
+
+a:hover {
+	text-decoration: underline;
+}
+ol, ul {
+	list-style: none;
+}
+
+.blank {
+	height: 10px;
+	overflow: hidden;
+	font-size: 0;
+	clear: both;
+}
+
+.blank2 {
+	height: 20px;
+	overflow: hidden;
+	font-size: 0;
+	clear: both;
+}
+
+.clear {
+	width: 100%;
+	height: 0px;
+	line-height: 0px;
+	clear: both;
+	overflow: hidden;
+	font-size: 1px;
+	margin-top: -1px;
+}
+
+.wrap {
+	width: 100%;
+	text-align: left;
+	background: #fff;
+}
+
+.noborderbottom {
+	border-bottom: 0;
+}
+/*font*/
+.fred {
+	color: #c00;
+}
+
+.fred a {
+	color: #c00;
+}
+
+.fblue {
+	color: #049;
+}
+
+.fblue a {
+	color: #049;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f13 {
+	font-size: 13px;
+}
+
+.f15 {
+	font-size: 15px;
+}
+
+.ffLetter {
+	font-size: 18px;
+	font-weight: bold;
+	color: #ccc;
+	font-family: arial, 宋体, sans-serif;
+}
+
+.mainBody {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.mainContent {
+	width: 960px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+/*头部城市搜索*/
+.topcity {
+	clear: both;
+	line-height: 40px;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.allcitybk {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.allcitybk .title01 {
+	widith: 950px;
+	background-color: #A9CEE0;
+	padding-left: 10px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+}
+
+.allcitybk .search {
+	line-height: 54px;
+	padding-left: 10px;
+	vertical-align: middle;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.allcitybk .search select {
+	float: left;
+	padding: 1px 2px;
+	margin: 0;
+	width: 90px;
+	line-height: 20px;
+	margin: 16px 8px 12px 0;
+	font-size: 12px;
+}
+
+.allcitybk .search input {
+	float: left;
+	margin: 0;
+	height: 22px;
+	margin: 15px 5px 12px 5px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.allcitybk .search .btn_sure {
+	cursor: pointer;
+	float: left;
+	height: 22px;
+	line-height: initial;
+	width: 60px;
+}
+
+.allcitybk .search .chose_or {
+	float: left;
+	font-weight: bold;
+	padding: 0 14px;
+}
+
+.allcitybk .search .input_in {
+	float: left;
+	text-align: left;
+	height: 18px;
+	line-height: 18px;
+	margin-right: 2px;
+	padding: 1px 2px;
+	width: 170px;
+}
+
+.allcitybk .search .ten_city, .allcitybk .search .ac_results {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #7F9DB9;
+	left: 546px;
+	_left: 495px;
+	position: absolute;
+	top: 104px;
+	width: 170px;
+	z-index: 9999;
+}
+
+.allcitybk .search .ac_results .tips {
+	color: #888;
+}
+
+.allcitybk .search .ac_results .pinying {
+	float: right;
+	width: 90px;
+	padding-right: 8px;
+	text-align: right;
+}
+
+.allcitybk .search .noin li a, .allcitybk .search .noin li, .noin {
+	color: #CC0000;
+}
+
+.allcitybk .search .ten_city li, .allcitybk .search .ac_results li {
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	text-indent: 0.5em;
+}
+
+.allcitybk .search .ten_city li a, .allcitybk .search .ac_results li a {
+	color: #898989;
+	display: block;
+	height: 22px;
+	width: 207px;
+	text-decoration: none;
+}
+
+.allcitybk .search .ten_city li.chosed, .ten_city li.chosed a,
+	.allcitybk .search .ac_results li.chosed, .allcitybk .search .ac_results li.chosed a
+	{
+	background: none repeat scroll 0 0 #3366CC !important;
+	color: #FFFFFF !important;
+	display: block;
+	height: 22px;
+}
+
+.allcitybk .search .ac_over {
+	background: none repeat scroll 0 0 #d0e1f5 !important;
+	color: #000 !important;
+	display: block;
+	height: 22px;
+}
+
+.allcitybk .searchcity {
+	line-height: 46px;
+	padding-left: 10px;
+	vertical-align: middle;
+	word-spacing: 12px;
+	word-wrap: break-word;
+	overflow: hidden;
+	zoom: 1;
+	font-weight: bold;
+}
+
+/* 按拼音首字母选择*/
+.letterSelt {
+	margin-top: 8px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.letterSelt .title02 {
+	width: 960px;
+	padding-left: 10px;
+	background-color: #A9CEE0;
+	height: 33px;
+	font-weight: bold;
+    border-bottom: 2px solid #FF552E
+}
+
+.letterSelt .title02 .btnOn {
+	float: left;
+	height: 33px;
+	line-height: 33px;
+	padding: 0 18px;
+	width: 160px;
+	border-left: 2px solid #FF552E;
+	border-right: 2px solid #FF552E;
+	border-top: 2px solid #FF552E;
+	background-color: #fff; text-align : center;
+	cursor: hand;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+}
+
+.letterSelt .title02 .ge {
+	float: left;
+	padding: 0 2px;
+}
+
+.letterSelt .title02 .btnOut {
+	float: left;
+	height: 31px;
+	margin-top: 2px;
+	line-height: 31px;
+	padding: 0 18px;
+	width: 158px;
+	border: 1px solid #FF552E;
+	border-bottom:2px solid #FF552E;
+	background-color:#EBF5FC;
+	text-align: center;
+	display: block;
+	cursor: pointer
+}
+
+.letterSelt .onCont {
+	clear: both;
+	overflow: hidden;
+	width: 960px;
+}
+
+.letterSelt .onCont li {
+	overflow: hidden;
+	zoom: 1;
+	line-height: 30px;
+	vertical-align: middle;
+	padding-left: 45px;
+	word-spacing: 11px;
+	text-align: left;
+	font-weight: normal;
+	word-wrap: break-word;
+	position: relative;
+	display: block;
+	text-align: left;
+	padding-right: 15px;
+}
+
+.letterSelt .onCont li a {
+	display: inline;
+	white-space: nowrap;
+}
+
+.letterSelt .onCont li strong {
+	font-weight: bold;
+	width: 30px;
+	float: left;
+	position: absolute;
+	left: 15px;
+	top: 1px;
+}
+
+.letterSelt .onCont li.blubk {
+	background:
+		url(http://img2.soufun.com/homepage/images/soufunFamily/searchcity_bk.gif)
+		repeat-x;
+}
+
+.letterSelt .onCont li.blubk02 {
+	background:
+		url(http://img2.soufun.com/homepage/images/soufunFamily/searchcity_bk.gif)
+		repeat-x 0 30px;
+}
+/*按省份选择*/
+.letterSelt .outCont {
+	clear: both;
+	overflow: hidden;
+	width: 960px;
+}
+
+.letterSelt .outCont li {
+	overflow: hidden;
+	zoom: 1;
+	line-height: 30px;
+	vertical-align: middle;
+	padding-left: 70px;
+	word-spacing: 12px;
+	text-align: left;
+	font-weight: normal;
+	word-wrap: break-word;
+	position: relative;
+	display: block;
+	text-align: left;
+	padding-right: 15px;
+}
+
+.letterSelt .outCont li a {
+	display: inline;
+	white-space: nowrap;
+}
+
+.letterSelt .outCont li strong {
+	font-weight: bold;
+	width: 50px;
+	float: left;
+	position: absolute;
+	left: 15px;
+	text-align: center;
+	top: 1px;
+}
+
+.letterSelt .outCont li.blubk {
+	background:
+		url(http://img2.soufun.com/homepage/images/soufunFamily/searchcity_bk.gif)
+		repeat-x;
+}
+
+.letterSelt .outCont li.blubk02 {
+	background:
+		url(http://img2.soufun.com/homepage/images/soufunFamily/searchcity_bk.gif)
+		repeat-x 0 30px;
+}
+
+/*回顶部*/
+.backtop {
+	width: 19px;
+	height: 62px;
+	position: fixed;
+	_position: absolute;
+	bottom: 60px;
+	right: 0;
+}
+
+* html, * html body /* 修正IE6振动bug */ {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+
+* html .backtop /* IE6 底部固定  */ {
+	position: absolute;
+	bottom: auto;
+	top: expression(eval(document.documentElement.scrollTop +
+		document.documentElement.clientHeight-this.offsetHeight- ( parseInt(this.currentStyle.marginTop
+		, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+}
+
+/* 1203 */
+table.table01 {
+	width: 960px;
+}
+
+table.table01 th {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+table.table01 td {
+	height: 0px;
+	line-height: 30px;
+}
+
+table.table01 td em {
+	color: #090;
+	font-style: normal;
+}
+
+table.table01 td a {
+	/* color: #049; */
+	word-spacing: 11px;
+	margin: 0 8px;
+}
+
+table.table01 td a.red {
+	color: #c00;
+}
+
+.font01 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #A9CEE0;
+	font-family: arial, 宋体, sans-serif;
+}
