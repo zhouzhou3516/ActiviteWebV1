@@ -9,7 +9,7 @@ util.topnav=function(active_menu){
 	var html = (function () {/*
 	<!-- nav-->
 	<div class="nav navbar-fixed-top">
-		<div class="">
+		<div class="container">
 			<div class="col-sm-1 col-xs-1">
 				<h1 style="margin: 11px 0">
 					<a href="./static/img/index.html" style="color: white">logo</a>
@@ -34,7 +34,7 @@ util.topnav=function(active_menu){
 
 						</a>
 					</li>
-					<li class="postevent" ><a href="./post_activity.html" >免费发布活动</a></li>
+					<li class="postevent" ><a href="./post_activity.html" >+发布活动</a></li>
 					
 				</ul>
 			</div>
@@ -112,34 +112,35 @@ util.footerhtml=function(){
 		<div class="container">
 			<div class="col-sm-2 col-xs-2 footer1">
 				<ul>
-					<li class="title">关于我们</li>
-					<li><a href="http://www.activity.com/contactus/" rel="nofollow">关于Activity</a></li>
+					<li class="title"><a href="#">关于我们</a></li>
+					<li class="title"><a href="#">服务内容</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-2 col-xs-2 footer1">
 				<ul>
-					<li class="title">更多服务</li>
-					<li><a href="http://www.activity.com/" rel="nofollow">更多服务</a></li>
+					<li class="title"><a href="#">活动推广</a></li>
+					<li class="title"><a href="#">活动直播</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-4 col-xs-4 footer1 contact">
+			<div class="col-sm-2 col-xs-2 footer1">
 				<ul>
-					<li class="title">联系我们</li>
-					<li style="line-height: 17px; padding-top: 10px"><i class="fa fa-phone "></i><span
-						style="color: #A0A8B7; font-size: 16px; padding: 0px">888-666666</span></li>
+					<li class="title"><a href="#">活动执行</a></li>
+					<li class="title"><a href="#">活动报道</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-2 col-xs-2 footer1">
+				<ul>
+					<li class="title"><a href="#">联系合作</a></li>
+					<li class="title"><a href="#">网站客服</a></li>
 				</ul>
 			</div>
 	
 			<div class="introduce">
 				<p>
-					<font style="color: black">网站介绍:</font><br> 网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍
+					<font style="color:#BDBCBC">网站介绍:</font><br> 网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍
 				</p>
 	
-				<p>
-					<font style="color: black">友情链接：</font><br>
-					<a href="http://www.baidu.com" target="_blank">百度</a>
-				</p>
-				<hr style="height: 1px;background-color: #FCAE9D;">
+				<hr style="border-top: 1px solid #BDBCBC;">
 				<p class="text-center">
 					CopyRight
 					<a rel="nofollow" target="_blank" href="./index.html">信息发布站点</a>

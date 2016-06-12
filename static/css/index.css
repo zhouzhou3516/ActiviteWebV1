@@ -1,15 +1,13 @@
-/*banner*/
-.banner{
-    background: #EEF0F4;
+.carousel .carousel-control{
+	display:none;
 }
-.bannerNumber,.TextHidden>div.hText>a{
-    background: #ff552e !important;
+.carousel:hover .carousel-control{
+	display:block;
 }
-.bannnerText li.active .eventName{
-    color: #ff552e;
-}
-.bannnerText li a:visited{
-    color: #fff;
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+	width:100%;
+	max-width:1200px;
+	max-height:500px;
 }
 /*内容*/
 .content{
@@ -30,7 +28,7 @@
     color: #44A859 !important;
 }
 .meeting_cat,.recent_meeting{
-    border-bottom: 1px solid #FDCFC5;
+    border-bottom: 1px solid #D9DFEB;
     margin-bottom: 18px;
     padding-bottom: 10px !important;
 }
@@ -40,7 +38,7 @@
     cursor: pointer;
 }
 .meeting_cat h3 a,.meeting_cat span a{
-    color: #ff552e !important;
+    color: #00A2CA !important;
     font-size: 22px;
     padding-right: 30px;
     padding-left: 0;
@@ -64,7 +62,7 @@
     /**width: 70%;*/
 }
 .meeting_cat h4 a{
-    color: #ff552e  !important;
+    color: #00A2CA  !important;
     font-size: 15px ;
     padding: 0 7px;
 }
@@ -112,7 +110,7 @@
     padding: 5px 5px 0;
     color: #7C8290 !important;
     margin: 0;
-    height: 45px;
+    height: 49px;
     width: 100%;
     text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
@@ -162,7 +160,7 @@
 .recent li{
     list-style: none;
     width: 100%;
-    padding: 8.2px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #D9DFEB;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -172,11 +170,14 @@
     color: #7C8290 !important;
     font-size: 14px;
 }
+.recent .recent_last{
+	border:none;
+}
 .recent li.showAll{
 	white-space:normal !important;
 }
 .recent_detail{
-    padding: 5px !important;
+    padding:6px 7px  6px 0 !important;
     display: none;
     position: relative;
 }
@@ -274,9 +275,7 @@
     color: #7B8292 !important;
     font-size: 14px;
 }
-.bannnerImg ul{
-    /*transform: translate3d(-4500px, 0px, 0px);*/
-}
+
 .sponsor:hover{
     border-bottom: 2px solid #1067C8 !important;
 }
@@ -299,32 +298,6 @@
     overflow: hidden;
     white-space: nowrap;
     margin: 0;
-}
-.spin{
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-animation: move 1s infinite linear;
-    -o-animation: move 1s infinite linear;
-    animation: move 1s infinite linear;
-}
-@keyframes move {
-    from{
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to{
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
 }
 .meetings:hover{
     box-shadow: 0 0 8px 1px rgba(183, 183, 183, 0.3);

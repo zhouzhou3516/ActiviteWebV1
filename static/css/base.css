@@ -24,9 +24,10 @@ a:hover{
     text-decoration: none !important;
     color: #fff !important;
 }
+/*background: #00A2CA;*/
 .nav{
     width: 100%;
-    background: #ff552e;
+    background: #00A2CA;
     height: 66px;
     /* position: relative; */
     z-index: 9990;
@@ -59,7 +60,7 @@ a:hover{
     font-size: 16px;
 }
 .nav ul .menue:hover{
-    background: #BA450D;
+    background: #388A9E;
     cursor: pointer;
 }
 .nav ul .menue_right{
@@ -97,10 +98,10 @@ a:hover{
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px; 
-    color:#ff552e;
+    color:#00A2CA;
 }
 .nav .postevent a:hover{
-    background: #BA450D;
+    background: #388A9E;
     color:#fff;
 }
 .nav .search{
@@ -135,9 +136,9 @@ a:hover{
     top: 66px;
     left: 0;
     width: 500px;
-    background: rgba(211, 81, 19, 0.8);
-    *background: #BA450D;
-    -background: #BA450D;
+    background: rgba(48,115,131,0.85);;
+    *background: rgba(48,115,131,0.85);;
+    -background: rgba(48,115,131,0.85);;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -147,7 +148,7 @@ a:hover{
     box-shadow: 0 0 7px 1px rgba(118, 118, 118, 0.44);
     /*visibility: hidden;*/
     display: none;
-    border: 1px solid #BA450D;
+    /* border: 1px solid #BA450D; */
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     -ms-transition: all .1s linear;
@@ -227,7 +228,7 @@ a:hover{
 
 /*footer*/
 .footer{
-    background: #EEF0F4;
+    background: #555555;
     padding: 20px 0 5px;
 }
 .footer ul{
@@ -242,7 +243,7 @@ a:hover{
     padding: 0;
 }
 .footer1 ul li a{
-    color: #A0A8B7 !important;
+    color: #DBDBDB !important;
     font-size: 16px;
 }
 .footer1 ul li a:hover{
@@ -282,7 +283,7 @@ a:hover{
     clear: both;
 }
 .introduce p,.introduce p a{
-    color: #A0A8B7;
+    color: #DBDBDB;
     font-size: 16px;
     line-height: 25px;
     margin-bottom: 15px;
@@ -328,8 +329,8 @@ a:hover{
     padding: 7px 13px;
 }
 .pagination ul .page_active{
-    background: #ff552e;
-    border: 1px solid #ff552e;
+    background: #00A2CA;
+    border: 1px solid #00A2CA;
     }
 .pagination ul .page_active a{
     color: #fff !important;
@@ -338,7 +339,7 @@ a:hover{
     color: #3391E8 !important;
 }
 .pagination ul li:hover{
-    border: 1px solid #ff552e;
+    border: 1px solid #00A2CA;
 }
 .erweima{
     display: inline-block;float:left;margin-top: 8px;

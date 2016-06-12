@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="sign huodongxing">
+	<head>
+		<title></title>
+        
+		<link href="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/v2.0/dist/css/hdx.min.css?v=v3.8.3" rel="stylesheet" type="text/css" />
+
+		<!--[if lte IE 6],><link href="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/css/ie6-fix.css" type="text/css" rel="stylesheet"><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/css/ie.css" /><![endif]-->
+		
+     	<!--[if lt IE 9]><script type="text/javascript" src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/js/ie/html5.js"></script><![endif]-->
+
+		<script src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/v2.0/dist/js/jquery.js" type="text/javascript"></script>
+        
+		
+	<style rel="stylesheet" type="text/css">
+		body {
+			background-image: url(https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/v2.0/img/sign_bg.jpg);
+		}
+	</style>
+	<script type="text/javascript" src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/js/validate/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/js/validate/messages_cn.js"></script>
+	<script type="text/javascript" src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/js/bootstrap/bootstrap-form.js"></script>
+	<script type="text/javascript" src="/iplookup"></script>
+	<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
+	<!--[if gte IE 8]><script src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/js/jquery.file.upload/cors/jquery.xdr-transport.js"></script><![endif]-->
+
+		<script type="text/javascript">
+		    function google_analytics_script(){
+				(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+						(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date(); a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+				ga('create', 'UA-34953182-1', 'huodongxing.com');
+				if(false) {
+					ga('set', '&uid', { 'userId':''});
+				}
+				ga('require', 'displayfeatures');
+				ga('send', 'pageview');
+
+				ga(function(tracker) { $("#google_analytics_client_id").val(tracker.get('clientId')); });
+			}
+
+		    var uvOptions = {};
+		    var _atrk_opts = { atrk_acct: "GgKTe1aoiI00WL", domain: "huodongxing.com", dynamic: true };
+
+			function validateEmail(email) {
+				if (email == null || $.trim(email) == "") return false;
+				var pattern = /^([A-Za-z0-9]+)(([A-Za-z0-9]+)|(_+)|(\-+)|(\.+)|(\++))*@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$/i;
+				return pattern.test(email);
+			}
+			function validatePhone(phone) {
+				if (phone == null || $.trim(phone) == "") return false;
+				var pattern = /(^((0[1,2]{1}\d{1}-?\d{8})|(0[3-9]{1}\d{2}-?\d{7,8}))$)|(^(0|86|17951)?(13[0-9]|15[0-35-9]|17[0678]|18[0-9]|14[57])[0-9]{8}$)/;
+				return pattern.test(phone);
+			}
+			Date.prototype.format = function (format) { //author: meizz
+				var o = {
+					"M+": this.getMonth() + 1, //month
+					"d+": this.getDate(),    //day
+					"h+": this.getHours(),   //hour
+					"m+": this.getMinutes(), //minute
+					"s+": this.getSeconds(), //second
+					"q+": Math.floor((this.getMonth() + 3) / 3),  //quarter
+					"S": this.getMilliseconds() //millisecond
+				}
+				if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+				for (var k in o) if (new RegExp("(" + k + ")").test(format))
+					format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+				return format;
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+
+
+<div class="container sign-in">
+    <a class="logo pull-left" href="http://www.huodongxing.com">
+        <img src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/v2.0/img/logo_sign.png" alt=""/></a>
+    <div class="sign-hd">
+        <a class="links" href="http://www.huodongxing.com"><span class="icon-index"></span>回到首页</a>
+    </div>
+    <div class="sign-bd">
+        <div class="title">
+            <a class="links" href="http://www.huodongxing.com/register">注册新帐号<span class="icon-goto"></span></a>
+            登录活动行
+        </div>
+        <div class="login-form">
+			<h4>
+                活动行帐号登录
+            </h4>        	
+			<form id="login_form" action="/login" method="POST">
+				<input type="hidden" value="0" name="LoginType" id="login_tab_type" />
+				<input type="hidden" value="" name="ContactType" id="login_contact_type" />
+				<input type="hidden" value="" name="RegNick" id="login_reg_nick" />
+				<input type="hidden" value="" name="RegName" id="login_reg_name" />
+				<input type="hidden" value="" name="RegGender" id="login_reg_gender" />
+				<input type="hidden" value="" name="LoginPhone" id="loginform_login_phone" />
+				<input type="hidden" value="" name="RegEmail" id="loginform_login_email" />
+				<input type="hidden" name="ex_country" />
+				<input type="hidden" name="ex_province" />
+				<input type="hidden" name="ex_city" />
+				<input type="hidden" name="ReturnUrl" value="%7e"/>
+				<!-- <ul class="tabs">
+							<li class="active"><a href="#common_longin_tab" data-toggle="tab">活动行帐号登录</a></li>
+							<li><a href="#valid_code_login_tab" data-toggle="tab">快速登录/注册</a></li>
+						</ul> -->
+            
+				<div class="tab-pane fade in active" id="common_longin_tab">
+					<div class="form-group">
+						<label for="txtName" class="icon-user"></label><input id="txtName" type="text" class="form-control" name="Username" placeholder="活动行帐号 邮箱/手机" />
+					</div>
+					<div class="form-group">
+						<label for="txtPwd" class="icon-password"></label><input id="txtPwd" type="password" placeholder="请输入您的密码" class="form-control"
+																				 name="Password" onkeypress="javascript:(if(event.keyCode==13) loginSubmit(););return false;" />
+					</div>
+                
+					
+                    <script type="text/javascript" src="https://api.geetest.com/get.php?gt=7a5d83647ca6c3e1d57af217a2e34e20"></script>
+					<a class="text-primary pull-right" href="/account/recovery">忘记密码</a>
+					<div class="checkbox-inline">
+						<label>
+							<input checked="checked" id="Remember1" name="Remember1" type="checkbox" value="true" /><input name="Remember1" type="hidden" value="false" />记住我
+						</label>
+					</div>
+					<button class="btn btn-primary btn-block" type="submit" onclick="javascript:loginSubmit('0');return false;">
+						登录</button>
+				</div>
+				<div class="tab-pane fade" id="valid_code_login_tab" style="display:none;">
+					<div class="form-group phone0-auto">
+						<input class="form-control" id="valid_login_contact" type="text" placeholder="邮箱/手机" />
+						<a class="btn send" id="valid_code_login_send_btn" onclick="javascript:sendContactLoginCode();return false;">
+							<i class="icon-share-alt icon-white"></i>&nbsp;发送验证码 <span id="login_sending_remain" style="display: none;"></span></a>
+						<!--<button class="btn send-repeat">发送验证码</button>-->
+					</div>
+					<div class="form-group">
+						<input id="valid_login_code_value" name="LoginCode" onkeypress="javascript:(if(event.keyCode==13) loginSubmit(););return false;"
+							class="form-control" type="text" placeholder="请输入您收到的验证码" />
+					</div>
+					<div class="tips">
+						使用邮箱或手机号码 + 验证码可快速登录或创建帐号。</div>
+					<div style="display: none;" class="checkbox">
+						<a class="pull-right" href="/account/recovery">忘记密码</a>
+						<label>
+							<input checked="checked" id="Remember2" name="Remember2" type="checkbox" value="true" /><input name="Remember2" type="hidden" value="false" />记住我
+						</label>
+					</div>
+					<button type="button" onclick="javascript:loginSubmit('1');return false;" class="btn btn-lg btn-block">
+						登录</button>
+				</div>
+			</form>
+    	</div>
+        <div class="login-coagent">
+            <h4>用合作网站帐号登录</h4>
+            <a href="http://www.huodongxing.com/account/wblogin?returnUrl=%257e" class="weibo">新浪微博</a>
+			<a href="http://www.huodongxing.com/account/qqlogin?returnUrl=%257e" class="qq">腾讯QQ</a>
+			<a href="http://www.huodongxing.com/account/baidulogin?returnUrl=%257e" class="baidu">百度账号</a>
+			<a href="http://www.huodongxing.com/account/doubanlogin?returnUrl=%257e" class="douban">豆瓣</a>
+			<a href="http://www.huodongxing.com/account/renlogin?returnUrl=%257e" class="renren">人人网</a>
+			<a href="http://www.huodongxing.com/account/alipaylogin?returnUrl=%257e" class="alipay">支付宝</a>
+        </div>
+        <div id="alert" style="display:none;">
+            <div class="alert alert-error">
+            </div>
+        </div>
+        <div id="dlg-complete-profile" class="modal fade" style="margin-top: 200px; overflow-y: auto;display:none;">
+            <div class="modal-dialog" style="width: 560px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            欢迎加入活动行，完善个人资料</h4>
+                    </div>
+                    <div class="modal-body" style="padding: 10px 0px 10px 50px;">
+                        <br />
+                        <form class="form-horizontal" id="complete_profile_form" action="">
+                        <input type="hidden" id="fast_add_contact_type" />
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="fast_add_contact" id="fast_add_contact_label" style="width: 70px;">
+                                </label>
+                                <input id="fast_add_contact" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="fast_reg_name" style="width: 70px;">
+                                    姓名&称呼</label>
+                                <input id="fast_reg_name" type="text" class="form-control" placeholder="真实姓名" />
+                                &nbsp;&nbsp;
+                                <label class="radio inline" style="min-width: 30px; display: inline-block;">
+                                    <input type="radio" name="fast_reg_gender" checked="checked" value="1" />先生
+                                </label>
+                                <label class="radio inline" style="min-width: 30px; display: inline-block;">
+                                    <input type="radio" name="fast_reg_gender" value="2" />小姐
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="fast_reg_nick" style="width: 70px;">
+                                    昵称</label>
+                                <input id="fast_reg_nick" type="text" class="form-control" placeholder="活动行昵称，限20字" />
+                            </div>
+                        </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" onclick="javascript:completeRegInfo();return false;">
+                            <i class="icon-ok icon-white"></i>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<div id="jquery_ajax_loading" class="layer-warning modal" style="margin-top:300px;display:none; overflow-y:auto;">
+			<div class="modal-dialog" style="width:450px;">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p><span class="icon-warning"></span> 页面正在加载中，请耐心等待...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="https://huodongxing.oss-cn-hangzhou.aliyuncs.com/Content/v2.0/dist/js/libs.min.js"></script>
+		
+    <script type="text/javascript">
+	    var login_sending_timer = null;
+	    var login_time_remain;
+
+	    function sendContactLoginCode() {
+	        if ($("#valid_code_login_send_btn").is(".disabled")) return;
+	        var aim = $("#valid_login_contact").val();
+	        var isEmail = validateEmail(aim);
+	        var isPhone = validatePhone(aim);
+	        if (!isEmail && !isPhone) {
+				$("#alert").show();
+	            $("#alert .alert").html('对不起，电子邮箱或手机号码格式不符，请检查。');
+	            $("#valid_login_contact").focus();
+	            return;
+	        }
+
+	        $("#valid_code_login_send_btn").addClass("disabled");
+	        login_time_remain = 120;
+	        //$("#login_sending_remain").show();
+	        login_sending_timer = window.setInterval(loginSendingBtn, 1000);
+	        $("#valid_login_contact").prop("readonly", true);
+	        setTimeout(function () {
+	            $.ajax({
+	                url: '/account/send_valid_key',
+	                type: "POST",
+	                global: false,
+	                data: { "type": (isEmail ? 0 : 1), "aim": aim, "token": "12D895D1DBC9D1DFA239FC8B035862EF642D392B7BC5AF92FE" },
+					dataType: $.browser.msie && $.browser.version == '7.0' ? 'text' : null,
+	                success: function (data) {
+						if(data != null && data.AjaxErrStatus != null && data.AjaxErrStatus == 1){
+							$("#alert").show();
+							$("#alert .alert").append("发送验证码出错，原因：" + data.AjaxErrMsg);
+							$("#valid_login_contact").prop("readonly", false);
+							login_time_remain = 0;
+							return;
+						}
+
+	                    if (data != null && data > 0) {
+                            $("#alert").show();
+	                        if (isEmail) {
+	                            $("#alert").html('<div class="alert alert-error"><strong>验证码已发送到您的邮箱，' + forwardEmailLink(aim) + '。</strong></div>');
+	                        }
+	                        else {
+	                            $("#alert").html('<div class="alert alert-error"><strong>验证码已发送到您的手机。</strong></div>');
+	                        }
+	                        if (data == 2) {
+	                            $('#fast_add_contact_type').val(isEmail ? "1" : "0");
+	                            $('#fast_add_contact_label').html(isEmail ? "联系手机 <font style='color:red;'>*</font>" : "电子邮箱 <font style='color:red;'>*</font>");
+	                            $('#fast_add_contact').attr("placeholder", isEmail ? "请补充您的联系手机" : "请补充您的电子邮箱");
+
+	                            $('#dlg-complete-profile').modal({ show: true, backdrop: false });
+	                        }
+	                    } else {
+	                        $("#alert").append('<div class="alert alert-error">验证码发送出错，请稍候重试。</div>');
+	                        $("#valid_login_contact").prop("readonly", false);
+	                        login_time_remain = 0;
+	                    }
+	                },
+	                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        $("#alert").show();
+	                    $("#alert .alert").append('验证码发送出错，服务不存在或无响应，请稍候重试。');
+	                    $("#valid_login_contact").prop("readonly", false);
+	                    login_time_remain = 0;
+	                }
+	            });
+	        }, 200);
+	    }
+
+	    function completeRegInfo() {
+	        $("#login_reg_nick").val($("#fast_reg_nick").val());
+	        $("#login_reg_name").val($("#fast_reg_name").val());
+	        $("#login_reg_gender").val($("input[name='fast_reg_gender']:checked").val());
+	        var fastAddContact = $("#fast_add_contact").val();
+
+	        if ($('#fast_add_contact_type').val() == "1") {
+	            if (fastAddContact != null && fastAddContact != "" && validatePhone(fastAddContact))
+	                $("#loginform_login_phone").val(fastAddContact);
+	            else {
+					$("#alert").show();
+                    $('#alert .alert').html("请补充正确的手机号码");
+	                $("#fast_add_contact").focus();
+	                return;
+	            }
+	        }
+	        else {
+	            if (fastAddContact != null && fastAddContact != "" && validateEmail(fastAddContact))
+	                $("#loginform_login_email").val(fastAddContact);
+	            else {
+					$("#alert").show();
+                    $('#alert .alert').html("请补充正确的电子邮箱");
+	                $("#fast_add_contact").focus();
+	                return;
+	            }
+	        }
+	        $('#dlg-complete-profile').modal('hide');
+	    }
+
+	    function loginSendingBtn() {
+	        if (login_time_remain > 0) {
+	            login_time_remain = login_time_remain - 1;
+	            $("#valid_code_login_send_btn").html(login_time_remain);
+	        }
+	        else {
+                $("#valid_code_login_send_btn").html('发送验证码');
+	            try { window.clearInterval(login_sending_timer); } catch (e) { }
+	            $("#valid_code_login_send_btn").removeClass("disabled");
+	            $("#valid_login_contact").prop("readonly", false);
+	            $("#login_sending_remain").hide();
+	        }
+	    }
+
+	    function loginSubmit(type) {
+	        $("#login_tab_type").val(type);
+	        if (type == "0") {
+	            var uname = $("#common_longin_tab input[name='Username']").val();
+	            var pwd = $("#common_longin_tab input[name='Password']").val();
+	            if (uname == null || pwd == null || $.trim(uname) == "" || $.trim(pwd) == "") {
+					$("#alert").show();
+                    $('#alert .alert').html("对不起，用户名（邮箱或手机号）或密码不可为空，请填写。");
+	                return;
+	            }
+				var isEmail = validateEmail(uname);
+	            var isPhone = validatePhone(uname);
+	            if (!isEmail && !isPhone) {
+					$("#alert").show();
+                    $('#alert .alert').html("对不起，邮箱或手机号码格式不符，请检查。");
+	                return;
+	            }
+	        }
+	        else if (type == "1") {
+	            var contact = $.trim($("#valid_login_contact").val());
+	            var isEmail = validateEmail(contact);
+	            var isPhone = validatePhone(contact);
+	            if (!isEmail && !isPhone) {
+					$("#alert").show();
+                    $('#alert .alert').html("对不起，邮箱或手机号码格式不符，请检查。");
+	                $("#valid_login_contact").focus();
+	                return;
+	            }
+	            if (isEmail) {
+	                $("#loginform_login_email").val(contact);
+	                $("#login_contact_type").val("0");
+	            }
+	            else {
+	                $("#loginform_login_phone").val(contact);
+	                $("#login_contact_type").val("1");
+	            }
+
+	            var code = $("#valid_code_login_tab input[name='LoginCode']").val();
+	            if (code == null || $.trim(code) == "") {
+					$("#alert").show();
+                    $('#alert .alert').html('对不起，' + (isEmail ? '电子邮箱' : '手机') + '验证码不可为空，请填写。');
+	                return;
+	            }
+	        }
+	        $('#login_form').submit();
+	    }
+        $('.icon-refresh-code').click(function(){
+            if ($(this).hasClass('active')) return
+            $(this).addClass('active');
+            setTimeout($.proxy(function(){
+                $(this).removeClass('active')
+            },this),300)
+        });
+	</script>
+
+		<script type="text/javascript">
+			+function ($) {
+				var $window = $(window);
+				var $body = $(document.body);
+				var $navBar = $('.hdx-header');
+  				var headerHeight = $navBar.outerHeight(true);
+
+				$body.scrollspy({
+					target: '.intro-nav',
+					offset: headerHeight + 40
+				});
+				$window.on('load', function () { $body.scrollspy('refresh'); });
+
+				var $introNav = $('.intro-nav');
+				var $bottomTools = $('.bottom_tools');
+				var $qrTools = $('.qr_tool');
+				var qrImg = $('.qr_img');
+				$introNav.find('.nav > a').click(function (e) { e.preventDefault(); });
+
+				setTimeout(function () {
+					$window.scroll(function () {
+						var scrollHeight = $(document).height();
+						var scrollTop = $window.scrollTop();
+						var $footerHeight = $('.page-footer').outerHeight(true);
+						var $windowHeight = $window.innerHeight();
+						$window.scrollTop() > 50 ? $("#scrollUp").fadeIn(200) : $("#scrollUp").fadeOut(200);
+						$bottomTools.css("bottom", scrollHeight - scrollTop - $footerHeight > $windowHeight ? 20 : $windowHeight + scrollTop + $footerHeight + 20 - scrollHeight);
+					});
+					$('#scrollUp').click(function (e) {
+						e.preventDefault();
+						$('html,body').animate({ scrollTop: 0 });
+					});
+					$qrTools.hover(function(){
+				      qrImg.removeClass('hide')
+				      $.support.transition ?
+				        qrImg
+				          .one($.support.transition.end, function(){
+				            qrImg.addClass('in')
+				          })
+				          .emulateTransitionEnd(150) :
+				        qrImg.addClass('in')
+				    },function(){
+				      qrImg.removeClass('in')
+				      $.support.transition ?
+				        qrImg
+				          .one($.support.transition.end, function(){
+				            qrImg.addClass('hide')
+				          }) :
+				        qrImg.addClass('hide')
+				    })
+				}, 500);
+			} (window.jQuery)
+
+			function addFavorite() {
+				if (document.all) {
+					try {
+						window.external.addFavorite(window.location.href, document.title);
+					} catch (e) {
+						window.alert("对不起，您的浏览器不支持此操作！\n\r请您使用使用Ctrl+D收藏本站");
+					}
+				} else if (window.sidebar) {
+					window.sidebar.addPanel(document.title, window.location.href, "");
+				} else {
+					window.alert("对不起，您的浏览器不支持此操作！\n\r请您使用使用Ctrl+D收藏本站");
+				}
+			}
+
+			function forwardEmailLink(email) {
+				if (email == null || email == "") return "";
+				var emlower = email.toLowerCase();
+				var link = "<a target='_blank' href='http://";
+				if (emlower.indexOf("@qq.com") > 0 || emlower.indexOf("@163.com") > 0 || emlower.indexOf("@126.com") > 0 || emlower.indexOf("@tom.com") > 0 || emlower.indexOf("@sina.com") > 0 || emlower.indexOf("@yahoo.com") > 0) {
+					link += "mail." + emlower.substring(emlower.indexOf("@") + 1);
+				}
+				else {
+					link += "www." + emlower.substring(emlower.indexOf("@") + 1);
+				}
+				link += "'>前往查收</a>";
+				return link;
+			}
+
+			function PopupMessage(type, msg, hideTime) {
+			    if (msg == null || msg == "" || type < 0) return;
+			    $("#pop_message_icon").removeClass("icon-danger").removeClass("icon-success").addClass(type == 0 ? "icon-success" : "icon-danger");
+			    $("#pop_message_content").html(msg);
+			    $('#pop_message_dlg').modal({ show: true, backdrop: false });
+			    if (hideTime != null && hideTime > 0) window.setTimeout(function () { $('#pop_message_dlg').modal('hide'); }, hideTime);
+			}
+
+			function setupScriptDelay(scriptPath, sync, onHead) {
+			    var setupScript = document.createElement("script"); setupScript.type = 'text/javascript';
+			    if (!sync) setupScript.async = true;
+			    if (scriptPath.indexOf("http") == 0) setupScript.src = scriptPath;
+			    else setupScript.src = (("https:" == document.location.protocol) ? "https://" : "http://") + scriptPath;
+			    if (onHead) document.getElementsByTagName("head")[0].appendChild(setupScript);
+			    else document.body.appendChild(setupScript);
+			}
+			function setupGlobalScript() {
+				setupScriptDelay("hm.baidu.com/h.js?d89d7d47b4b1b8ff993b37eafb0b49bd", true, true);
+				google_analytics_script();
+				//alexa_script();
+			}
+			$(function () {
+			    $.ajaxSetup({ timeout: 45000 });
+			    $(document).ajaxStart(function () {
+			        var bgfi = $("div.modal-backdrop.in");
+			        if (bgfi != null && bgfi.length > 0) $('#jquery_ajax_loading').modal({ show: true, backdrop: false, keyboard: false });
+			        else $('#jquery_ajax_loading').modal({ show: true, backdrop: 'static', keyboard: false });
+			    }).ajaxStop(function () {
+			        $('#jquery_ajax_loading').modal('hide');
+			        var bgfi = $("div.modal-backdrop.in");
+			        if (bgfi == null || bgfi.length == 0) { $("body").removeClass("modal-open"); }
+			    });
+				window.setTimeout("setupGlobalScript()", 350);
+			});
+
+			//var _bdhmProtocolExternal = (("https:" == document.location.protocol) ? " https://" : " http://");
+			//document.write(unescape("%3Cscript src='" + _bdhmProtocolExternal + "hm.baidu.com/h.js%3Fd89d7d47b4b1b8ff993b37eafb0b49bd' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+
+			<script type="text/javascript" src="/iplookup"></script>
+		<script type="text/javascript">
+			if(remote_ip_info != null){
+				$("input[type=hidden][name='ex_country']").val(remote_ip_info.country);
+				$("input[type=hidden][name='ex_province']").val(remote_ip_info.province);
+				$("input[type=hidden][name='ex_city']").val(remote_ip_info.city);
+
+				$("input[type=hidden][name='City']").val(remote_ip_info.city);
+				$("input[type=hidden][name='Province']").val(remote_ip_info.province);
+				$("input[type=hidden][name='Address']").val(remote_ip_info.province + "--" + remote_ip_info.city);
+
+				$("input[type=hidden][name='country']").val(remote_ip_info.country);
+				$("input[type=hidden][name='province']").val(remote_ip_info.province);
+				$("input[type=hidden][name='city']").val(remote_ip_info.city);
+				$("input[type=hidden][name='district']").val(remote_ip_info.district);
+
+				var currentRegion = null;
+				if (document.cookie.length > 0) {
+					var regionstart = document.cookie.indexOf("HDX_REGION=");
+					if (regionstart != -1){
+						regionstart = regionstart + "HDX_REGION".length + 1;
+						var regionend = document.cookie.indexOf(";", regionstart);
+						if (regionend == -1) regionend = document.cookie.length;
+						currentRegion = document.cookie.substring(regionstart, regionend);
+					}
+				}
+				if((currentRegion == null || $.trim(currentRegion) == "") && remote_ip_info.city != null && $.trim(remote_ip_info.city) != ""){
+					var regionExDate=new Date();
+					regionExDate.setDate(regionExDate.getDate() + 365);
+					document.cookie = "HDX_REGION=" + escape(remote_ip_info.province + "," + remote_ip_info.city) + ";domain=huodongxing.com;path=/;expires=" + regionExDate.toGMTString();
+				}
+			}
+		</script>
+
+        <!-- Start Alexa Certify Javascript -->
+        <script type="text/javascript">
+            _atrk_opts = { atrk_acct: "GgKTe1aoiI00WL", domain: "huodongxing.com", dynamic: true };
+            function alexa_script() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); }
+        </script>
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=GgKTe1aoiI00WL" style="display:none" height="1" width="1" alt="" /></noscript>
+        <!-- End Alexa Certify Javascript -->
+        <input type="hidden" value="web01"/>
+	</body>
+</html>
