@@ -17,6 +17,13 @@ body{
  	/* min-height: 2000px; */
   	padding-top: 75px;/* fixed top*/
 }
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">\00a0";
+}
+
 a:hover{
     text-decoration: none !important;
 }
