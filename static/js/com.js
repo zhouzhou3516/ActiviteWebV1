@@ -50,12 +50,13 @@ function initNavCityMenu(){
 			"广州", "shenzhen", "深圳", "chengdu", "成都", "xian", "西安", "xiamen", "厦门",
 			"nanjing", "南京", "wuhan", "武汉", "chongqing", "重庆", "tianjin", "天津",
 			"changsha", "长沙", "gengduo", "更多...");
-	var nav_city_menu_html="<div class='col-sm-12 col-xs-12 city'>选择城市</div>";
+	//var nav_city_menu_html="<div class='col-sm-12 col-xs-12 city'>选择城市</div>";
+	var  nav_city_menu_html="";
 	for(i=0;i<nav_city_menu.length;i=i+2){
 		if(nav_city_menu[i]=="gengduo"){
 			nav_city_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='./all_citys.html'>"+nav_city_menu[i+1]+"</a></div>"
 		}else
-		nav_city_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='#'>"+nav_city_menu[i+1]+"</a></div>"
+		nav_city_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='./index.html'>"+nav_city_menu[i+1]+"</a></div>"
 	}
 	/*$(".business_menue").html(nav_city_menu_html)
 	$(".business").hover(function() {
@@ -149,5 +150,18 @@ util.footerhtml=function(){
 			</div>
 		</div>
 	</div>*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+	document.write(html);
+}
+
+util.paginationhtml=function(){
+	var html=(function(){/*
+	<div class="pagination">
+    <ul>
+             <li class="page_active"><a href="">1</a></li>
+             <li><a href="#" >2</a></li>
+             <li><a href="#" >3</a></li>
+             <li><a href="#">下一页</a></li>
+    </ul>
+</div>*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
 	document.write(html);
 }

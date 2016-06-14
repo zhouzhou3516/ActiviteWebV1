@@ -183,8 +183,8 @@ ol, ul {
 .allcitybk .search .input_in {
 	float: left;
 	text-align: left;
-	height: 18px;
-	line-height: 18px;
+	height: 20px;
+	line-height: 20px;
 	margin-right: 2px;
 	padding: 1px 2px;
 	width: 170px;
@@ -196,7 +196,7 @@ ol, ul {
 	left: 546px;
 	_left: 495px;
 	position: absolute;
-	top: 104px;
+	top: 106px;
 	width: 170px;
 	z-index: 9999;
 }

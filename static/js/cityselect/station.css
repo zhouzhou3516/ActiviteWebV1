@@ -2,10 +2,10 @@
 /* CSS Document */
 
 table,td,tr,th{font-size:12px;}
-a:link {color: #000; text-decoration:none;}
+/* a:link {color: #000; text-decoration:none;}
 a:visited {color: #000;text-decoration:none;}
 a:hover {color: #000; text-decoration:underline;}
-a:active {color: #000;}
+a:active {color: #000;} */
 
 input,img{ vertical-align:middle;}
 img{ border:none;}

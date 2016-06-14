@@ -252,6 +252,24 @@ function js(el) {
 			// nav.className="back";
 		}
 	}
+	
+	$('.ac_even').on('mouseover', function() {
+		city_shiftSelectInLi(this);
+	}).on('click', function() {
+		//alert(1)
+		//alert($(this).attr("data"));
+		curObj.val($(this).text());
+		curObjCode.val($(this).attr("data"));
+		// $("#fromStationText").val($(this).text());
+		$("#form_cities2").css("display", "none");
+		cur = -1;
+		sugSelectItem2 = 0;
+		setFromStationStyle();
+		setToStationStyle();
+		if (loadJsFlag) {
+			LoadJS($(this).attr("data"));
+		}
+	});
 }
 
 function tHtmlGetCityName(nod, at, aPageNo) {
@@ -387,14 +405,14 @@ function closeShowCity() {
 	var fromStationText = $("#fromStationText").val();
 	var fromStation = $("#fromStation").val();
 	if (fromStationText == "") {
-		$("#fromStationText").val("简码/汉字");
+		$("#fromStationText").val("不限");
 		from_to_station_class_gray($("#fromStationText"));
 		$("#fromStation").val("");
 	}
 	var toStationText = $("#toStationText").val();
 	var toStation = $("#toStation").val();
 	if (toStationText == "") {
-		$("#toStationText").val("简码/汉字");
+		$("#toStationText").val("不限");
 		from_to_station_class_gray($("#toStationText"));
 		$("#toStation").val("");
 	}
@@ -553,12 +571,30 @@ function pageDesigh(pagecount, aPageNo, idIndex) {
 	} else {
 		// $("#flip_cities2").css("display", "none");
 	}
+	
+	$('.ac_even').on('mouseover', function() {
+		city_shiftSelectInLi(this);
+	}).on('click', function() {
+		//alert(1)
+		//alert($(this).attr("data"));
+		curObj.val($(this).text());
+		curObjCode.val($(this).attr("data"));
+		// $("#fromStationText").val($(this).text());
+		$("#form_cities2").css("display", "none");
+		cur = -1;
+		sugSelectItem2 = 0;
+		setFromStationStyle();
+		setToStationStyle();
+		if (loadJsFlag) {
+			LoadJS($(this).attr("data"));
+		}
+	});
 }
 
 // 搜索符合关键字的城市
 function filterCity(aKeyword) {
 	if (aKeyword.length == 0) {
-		$("#top_cities").html("简码/汉字或↑↓");
+		$("#top_cities").html("不限或↑↓");
 		return array_cities;
 	}
 	var aList = [];
@@ -1016,7 +1052,7 @@ function setFromStationStyle() {
 	var fromStationText = $("#fromStationText").val();
 	var fromStation = $("#fromStation").val();
 	if (fromStationText == "") {
-		$("#fromStationText").val("简码/汉字");
+		$("#fromStationText").val("不限");
 		from_to_station_class_gray($("#fromStationText"));
 		$("#fromStation").val("");
 	} else {

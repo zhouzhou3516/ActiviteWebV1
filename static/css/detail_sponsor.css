@@ -35,10 +35,7 @@
     letter-spacing: 1px;
     line-height: 28px;
 }
-.sponsor_topright{
-    display: inline-block;
-    float: right;
-}
+
 .spon_info_img{
     /*height: 237px;*/
     /*width: 380px;*/
@@ -119,7 +116,7 @@
 }
 .hr{
     height: 1px;
-    background-color: #FCAE9D;
+    background-color: #D9DFEB;
 }
 span.active{
     font-size: 1.35em;
@@ -264,7 +261,7 @@ span.active{
 }
 .message_popup h4{
     display: block;
-    background-color: #ff552e;
+    background-color: #00A2CA;
     padding: .7em 10px;
     color: #fff;
     margin: 0px;
