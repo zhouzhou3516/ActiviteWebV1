@@ -14,6 +14,11 @@
 
 	<script src="./static/js/com.js"></script>
     <style>
+    
+      .btn-group .active {
+         background-color: #00A2CA;
+	 color: white;
+      }
 
       .carousel-inner img {
         width: 100%; /* Set width to 100% */
@@ -47,7 +52,8 @@
 	<div class="container">
 		<ol class="breadcrumb">
 			<li><a href="index.html">首页</a></li>
-			<li class="active">观点</li>
+			<li><a href="viewpoint_list.html">观点</a></li>
+			<li class="active">全部</li>
 		</ol>
 
 		<table class="table table-bordered">
@@ -66,27 +72,34 @@
 				</tr>
 			</tbody>
 		</table>
-		<div class="btn-group">
-			<button type="button" class="btn btn-primary">最新发布</button>
-			<button type="button" class="btn btn-primary">最热点击</button>
-			<button type="button" class="btn btn-primary">最多讨论</button>
-		</div>
+		
+		<div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新发布
+           </label>
+           <label class="btn btn-default">
+             <input type="radio" name="options" id="option2" autocomplete="off"> 最热点击
+          </label>
+          <label class="btn btn-default">
+            <input type="radio" name="options" id="option3" autocomplete="off"> 最多讨论
+          </label>
+        </div>
     <br />
     <br />
 
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="margin-bottom: 5px;">
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left">
-						<a href="#">
-							<img class="media-object" src="http://placehold.it/150x100?text=img" alt="">
+						<a href="viewpoint_detail.html">
+							<img class="media-object" src="./static/img/activity_sample2.jpg" alt="" style="max-height: 115px;">
 						</a>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4>
+						<a href="viewpoint_detail.html"><h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4></a>
             <br/>
 						<div class="row">
-							<div class="col-sm-8">
+							<div class="col-sm-12">
                 <p class="text-muted">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
 							</div>
 						</div>
@@ -112,19 +125,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="margin-bottom: 5px;">
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left">
-						<a href="#">
-							<img class="media-object" src="http://placehold.it/150x100?text=img" alt="">
+						<a href="viewpoint_detail.html">
+							<img class="media-object" src="./static/img/activity_sample2.jpg" alt="" style="max-height: 115px;">
 						</a>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4>
+						<a href="viewpoint_detail.html"><h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4></a>
             <br/>
 						<div class="row">
-							<div class="col-sm-8">
+							<div class="col-sm-12">
                 <p class="text-muted">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
 							</div>
 						</div>
@@ -150,19 +163,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="margin-bottom: 5px;">
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left">
-						<a href="#">
-							<img class="media-object" src="http://placehold.it/150x100?text=img" alt="">
+						<a href="viewpoint_detail.html">
+							<img class="media-object" src="./static/img/activity_sample2.jpg" alt="" style="max-height: 115px;">
 						</a>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4>
+						<a href="viewpoint_detail.html"><h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4></a>
             <br/>
 						<div class="row">
-							<div class="col-sm-8">
+							<div class="col-sm-12">
                 <p class="text-muted">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
 							</div>
 						</div>
@@ -188,19 +201,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="margin-bottom: 5px;">
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left">
-						<a href="#">
-							<img class="media-object" src="http://placehold.it/150x100?text=img" alt="">
+						<a href="viewpoint_detail.html">
+							<img class="media-object" src="./static/img/activity_sample2.jpg" alt="" style="max-height: 115px;">
 						</a>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4>
+						<a href="viewpoint_detail.html"><h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4></a>
             <br/>
 						<div class="row">
-							<div class="col-sm-8">
+							<div class="col-sm-12">
                 <p class="text-muted">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
 							</div>
 						</div>
@@ -226,20 +239,20 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="margin-bottom: 5px;">
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left">
-						<a href="#">
-							<img class="media-object" src="http://placehold.it/150x100?text=img" alt="">
+						<a href="viewpoint_detail.html">
+							<img class="media-object" src="./static/img/activity_sample2.jpg" alt="" style="max-height: 115px;">
 						</a>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4>
+						<a href="viewpoint_detail.html"><h4 class="media-heading">【行业】中国汽车金融正在起步，未来三年市场规模或达1.5万亿</h4></a>
             <br/>
 						<div class="row">
-							<div class="col-sm-8">
-                <p class="text-muted" style="padding-left: 10px;">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
+							<div class="col-sm-12">
+                <p class="text-muted">概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</p>
 							</div>
 						</div>
 					</div>
@@ -265,21 +278,10 @@
 			</div>
 		</div>
 
-		<nav>
-			<ul class="pagination">
-				<li><a href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a></li>
-			</ul>
-		</nav>
+		<script type="text/javascript">
+		  util.paginationhtml();
+		</script>
+
 	</div>
 
 

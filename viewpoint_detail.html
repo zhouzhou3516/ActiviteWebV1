@@ -14,6 +14,10 @@
 	<script src="./static/js/com.js"></script>
     <style>
 
+	  .btn-group .active {
+	    background-color: #0082C6;
+		color: white;
+	  }
       .carousel-inner img {
         width: 100%; /* Set width to 100% */
         min-height: 200px;
@@ -50,44 +54,53 @@
         <li class="active">文章标题</li>
       </ol>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">最新发布</button>
-        <button type="button" class="btn btn-default">最热点击</button>
-        <button type="button" class="btn btn-default">最多讨论</button>
-      </div>
-      <br/>
+
+       <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新发布
+           </label>
+           <label class="btn btn-default">
+             <input type="radio" name="options" id="option2" autocomplete="off"> 最热点击
+          </label>
+          <label class="btn btn-default">
+            <input type="radio" name="options" id="option3" autocomplete="off"> 最多讨论
+          </label>
+        </div>
+
+
 
       <div class="row">
         <div class="col-sm-12">
-        <h4>医疗行业是中国移动互联网最后一个，也是最大的一个机会</h4>
+        <h3>医疗行业是中国移动互联网最后一个，也是最大的一个机会</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 text-muted">
-          <span class="glyphicon glyphicon-user"></span> 张文萱
-          <span class="glyphicon glyphicon-time"></span> 2016-06-05
-          <span class="glyphicon glyphicon-tags"></span> 医疗健康
-          <span class="glyphicon glyphicon-eye-open"></span> 164
-          <span class="glyphicon glyphicon-comment"></span> 0
-          <span class="glyphicon glyphicon-heart-empty"></span> 喜欢(1)
+          <span class="glyphicon glyphicon-user"></span> <a href="#" class="text-muted"> 张文萱</a>&nbsp;&nbsp;
+          <span class="glyphicon glyphicon-time"></span> 2016-06-05&nbsp;&nbsp;
+          <span class="glyphicon glyphicon-tags"></span> <a href="#" class="text-muted"> 医疗健康</a>&nbsp;&nbsp;
+          <span class="glyphicon glyphicon-eye-open"></span> 164&nbsp;&nbsp;
+          <span class="glyphicon glyphicon-comment"></span> 0&nbsp;&nbsp;
+          <a href="#" class="text-muted"><span class="glyphicon glyphicon-heart-empty"></span> 喜欢(1)</a>
         </div>
       </div>
+	  <br />
       <div class="jumbotron">
-        <div style="height: 100px;"></div>
+        <div style="height: 300px;"></div>
       </div>
       <div class="row">
         <div class="col-sm-12">
           <ul class="list-inline">
-            <li>标签：</li>
-            <li><a class="btn" href="">互联网</a></li>
-            <li><a class="btn" href="">分级诊疗</a></li>
-            <li><a class="btn" href="">创业创新</a></li>
-            <li><a class="btn" href="">医疗健康</a></li>
-            <li><a class="btn" href="">好人生</a></li>
+            <li style="vertical-align: middle; font-weight: bold;">标签：</li>
+            <li><button class="btn" >互联网</button></li>
+            <li><button class="btn" >分级诊疗</button></li>
+            <li><button class="btn" href="">创业创新</button></li>
+            <li><button class="btn" href="">医疗健康</button></li>
+            <li><button class="btn" href="">好人生</button></li>
           </ul>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-bottom: 5px;">
         <div class="col-sm-6">
           <button class="btn btn-warning">
             <span class="glyphicon glyphicon-thumbs-up"></span> 喜欢
@@ -96,26 +109,28 @@
             <span class="glyphicon glyphicon-comment"></span> 发布评论
           </button>
         </div>
-        <div class="pull-right">
-          <a class="btn"><img src="http://placehold.it/30x30"></a>
-          <a class="btn"><img src="http://placehold.it/30x30"></a>
-          <a class="btn"><img src="http://placehold.it/30x30"></a>
-          <a class="btn"><img src="http://placehold.it/30x30"></a>
-          <a class="btn"><img src="http://placehold.it/30x30"></a>
+        <div class="pull-right" style="margin-right: 25px;">
+          <a ><img src="http://placehold.it/30x30"></a>
+          <a ><img src="http://placehold.it/30x30"></a>
+          <a ><img src="http://placehold.it/30x30"></a>
+          <a ><img src="http://placehold.it/30x30"></a>
+          <a ><img src="http://placehold.it/30x30"></a>
         </div>
+
       </div>
 
       <div class="well well-lg">
         <img class="img-circle" src="http://placehold.it/50x50">
-        <span>张文萱</span>
-        <span> 182篇文章</span>
-        <button class="btn">站点</button>
-        <button class="btn">微博</button>
+        <button class="btn" style="background-color: inherit;">张文萱</button>&nbsp;&nbsp;
+        <span class="text-muted" style="background-color: inherit; vertical-align: middle;"> 182篇文章</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn" style="background-color: inherit; border: 1px solid red; border-radius: 20px; padding: 2px 6px;">站点</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn" style="background-color: inherit; border: 1px solid blue; border-radius: 20px; padding: 2px 6px;">微博</button>
       </div>
 
       <div class="row">
         <div class="col-sm-12">
           <h3>相关文章</h3>
+		  
           <ul>
             <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
             <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
