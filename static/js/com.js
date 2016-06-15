@@ -1,4 +1,4 @@
-/**
+﻿/**
  * common js for all page
  */
 
@@ -27,11 +27,12 @@ util.topnav=function(active_menu){
 					<li class="menue"><a href="./find_activity.html" >找活动</a></li>
 					<li class="menue"><a href="./activity_inprocess.html" >活动进行时</a></li>
 					<li class="menue"><a href="./viewpoint_list.html" >观点</a></li>
-					<li class="search" >
-                    <form action="search_activity.html"><input name="keyword" type="text" placeholder="请输入活动关键字"/><span class="m-search m_iconfont">&#xe607;</span></form>
-                    </li>
+					<li class="search">
+						<form action="./find_activity.html" methon="get"><input name="keyword" type="text" placeholder="搜索活动"><a href="./find_activity.html"><span class="m-search m_iconfont"></span></a></form>
+
+					</li>
 					<li class="login" ><a href="./login.html" rel="nofollow">
-							<span class="Login" style="font-size: 14px">登录</span>
+							<span class="Login" >登录</span>
 
 						</a>
 					</li>
@@ -157,6 +158,18 @@ util.footerhtml=function(){
 util.paginationhtml=function(){
 	var html=(function(){/*
 	<div class="pagination">
+    <ul>
+             <li class="page_active"><a href="">1</a></li>
+             <li><a href="#" >2</a></li>
+             <li><a href="#" >3</a></li>
+             <li><a href="#">下一页</a></li>
+    </ul>
+</div>*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+	document.write(html);
+}
+util.paginationhtml2=function(){
+	var html=(function(){/*
+	<div class="pagination-full">
     <ul>
              <li class="page_active"><a href="">1</a></li>
              <li><a href="#" >2</a></li>

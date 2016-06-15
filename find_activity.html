@@ -1,192 +1,397 @@
+
 <!DOCTYPE html>
-<html lang="zh-Hans">
-  <head>
-    <title>首页</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<link href="./static/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./static/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./static/css/base.css">
-	<script src="./static/js/com.js"></script>
-    <style>
-      /* Add a gray background  color and some padding to the footer */
-      footer {
-        background-color: #f2f2f2;
-        padding: 25px;
-      }
-
-      footer ul li {
-        list-style: none;
-        line-height: 33px;
-        cursor: pointer;
-      }
-
-      .carousel-inner img {
-        width: 100%; /* Set width to 100% */
-        min-height: 200px;
-      }
-
-      .activity h3  {
-        display: inline;
-      }
-
-      .activity h4  {
-        display: inline;
-      }
-
-      .activity-hr {
-        margin-top: 0px;
-      }
-
-      /* Hide the carousel text when the screen is less than 600 pixels wide */
-      @media (max-width: 600px) {
-        .carousel-caption {
-          display: none; 
-        }
-      }
-	  
-	  .row.vertical-divider > div[class^="col-"] {
-	    border-left: 3px solid #f2f7f9;
-		border-right: 3px solid #f2f7f9;
-	  }
-	  
-	  .row.vertical-divider div[class^="col-"]:first-child {
-	    border-left: none;
-	  }
-	  
-	  .row.vertical-divider div[class^="col-"]:last-child {
-	    border-right: none;
-	  }
-    </style>
-  </head>
-  <body>
-
-    <script type="text/javascript"> util.topnav();</script>
-
-    <div class="container">
-      <ol class="breadcrumb">
-        <li><a href="index.html">首页</a></li>
-        <li class="active">搜索</li>
-      </ol>
-      <form class="form">
-	  <!--
-	    <div class="form-group">
-		  <input class="form-control" type="text" placeholder="请输入活动关键字">
-		</div>
-		<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-		-->
-		<div class="input-group">
-          <input type="text" class="form-control" placeholder="请输入活动关键字">
-          <span class="input-group-btn">
-        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-      </span>
-    </div><!-- /input-group -->
-	  </form>
-	  <br/>
-	  
-	  <div class="row">
-	    <div class="col-sm-10">
-	      <ul class="list-inline">
-		    <li class="active">大家都在搜：</li>
-		    <li><a href="">演唱会</a></li>
-		    <li><a href="">亲子游</a></li>
-		    <li><a href="">户外交友</a></li>
-		    <li><a href="">美食</a></li>
-		    <li><a href="">打折促销</a></li>
-		  </ul>
-		</div>
-	  </div>
-	
-
-	    <div class="well well-sm">
-	      <p>为您找到 <span class="text-success">20</span> 个与 <span class="text-info">智慧城市</span> 相关的活动</p>
-	    </div>
+    <link rel="stylesheet" href="./static/css/base.css">
+	<link rel="stylesheet" href="./static/css/activityList.css"/>
+    <script src="./static/js/com.js"></script>
+</head>
+<style>
+</style>
+<body>
 
 
-		<div class="media">
-		  <div class="media-left">
-		    <a href="#">
-			  <img class="media-object img-thumbnail" src="http://placehold.it/150x100?text=img" alt="">
-			</a>
-		  </div>
-		  <div class="media-body">
-		    <div class="row vertical-divider">
-			  <div class="col-sm-10" style="padding-right: 0px;">
-			    <h4 class="media-heading">第十三届中国国际合唱节暨国际合唱联盟合唱教育大会</h4>
-			    <div class="row">
-			      <div class="col-sm-9">
-			        <div>概述：第十三届中国国际合唱节暨国际合唱联盟教育大会将由四大版块构成，即会议论坛版块、比赛演唱版块、教育交流版块和公益活动版块。</div>
-		   	      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-sm-2">
-			        <p><span class="glyphicon glyphicon-map-marker"></span> 北京</p>
-                  </div>
-                  <div class="col-sm-2">
-                    <p><span class="glyphicon glyphicon-time"></span> 2016-06-05</p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="col-sm-2">
-			    <div class="row">
-				  <h3>正在进行</h3>
+
+<script type="text/javascript">util.topnav()</script>
+
+	<div class="content">
+		<div class="container">
+			<ol class="breadcrumb">
+				<li><a href="./index.html">首页</a></li>
+				<li class="active">搜索活动</li>
+			  </ol>
+			<div class="content_left">
+				<div class="search_T">
+				    <!--搜索出结果后的搜索框中显示"搜索文字"-->
+				    <div class="search_otherHd">
+						<div class="K">
+							<input type="text" id="find_pub_search" placeholder="搜索活动" value="马拉松" name="">
+						</div>
+						<a href="javascript:void(0);" >马上搜索</a></div>
+				    <div class="search_Keyword">大家都在搜索：
+				            <a href="">徒步</a>
+				            <a href="">DIY</a>
+				            <a href="">旅行</a>
+				            <a href="">瑜伽</a>
+				            <a href="">相亲</a>
+				    </div>
+				  </div>
+				<div class="search_result_msg" >
+					<span >XXX为您找到 81 个与 马拉松 相关的活动</span>
 				</div>
-				<div class="row">
-				  <p>关注：<span>996</span></p>
-				</div>
-			  </div>
+				
+				<div class="all_events" style="float: left;">
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-146345290.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='./activity_detail.html' target="_blank">
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="./activity_detail.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">健身</a>
+
+								<a target="_blank" href="./activity_category.html">ChinaFit</a>
+
+							</p>
+							<p class='meeting_des'>活动介绍，活动介绍活动介绍，活动介绍活动介绍，活动介绍活动介绍，活动介绍活动介绍，活动介绍活动介绍，活动介绍	</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-06-14
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p style="line-height: 80px">
+								<span>截止</span>
+							</p>
+							<p>关注：56542人气</p>
+						</div>
+					</div>
+
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-4320114.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='/event-4320114.html' target="_blank">
+
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="/event-4320114.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">移动互联网</a>
+
+								<a target="_blank" href="./activity_category.html">大数据</a>
+
+								<a target="_blank" href="./activity_category.html">云计算</a>
+
+							</p>
+							<p class='meeting_des'>概述:2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-07-28
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p>
+								<br />
+								<span>￥900.00</span>
+								<br />
+
+							</p>
+							<p>关注：30274人气</p>
+						</div>
+
+					</div>
+					
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-4320114.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='/event-4320114.html' target="_blank">
+
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="/event-4320114.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">移动互联网</a>
+
+								<a target="_blank" href="./activity_category.html">大数据</a>
+
+								<a target="_blank" href="./activity_category.html">云计算</a>
+
+							</p>
+							<p class='meeting_des'>概述:2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-07-28
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p>
+								<br />
+								<span>￥900.00</span>
+								<br />
+
+							</p>
+							<p>关注：30274人气</p>
+						</div>
+
+					</div>
+					
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-4320114.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='/event-4320114.html' target="_blank">
+
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="/event-4320114.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">移动互联网</a>
+
+								<a target="_blank" href="./activity_category.html">大数据</a>
+
+								<a target="_blank" href="./activity_category.html">云计算</a>
+
+							</p>
+							<p class='meeting_des'>概述:2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-07-28
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p>
+								<br />
+								<span>￥900.00</span>
+								<br />
+
+							</p>
+							<p>关注：30274人气</p>
+						</div>
+
+					</div>
+					
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-4320114.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='/event-4320114.html' target="_blank">
+
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="/event-4320114.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">移动互联网</a>
+
+								<a target="_blank" href="./activity_category.html">大数据</a>
+
+								<a target="_blank" href="./activity_category.html">云计算</a>
+
+							</p>
+							<p class='meeting_des'>概述:2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-07-28
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p>
+								<br />
+								<span>￥900.00</span>
+								<br />
+
+							</p>
+							<p>关注：30274人气</p>
+						</div>
+
+					</div>
+					
+					<div class='col-sm-12 col-xs-12 meeting_list' data-href="/event-4320114.html">
+						<div class='col-sm-3 col-xs-3'>
+							<a href='/event-4320114.html' target="_blank">
+
+								<img width='100%' src='./static/img/activity_sample.jpg'
+									alt='2016活动xxx' />
+
+							</a>
+						</div>
+
+						<div class='col-sm-7 col-xs-7 detail'>
+							<h3 class='meeting_name'>
+								<a href="/event-4320114.html" target="_blank">2016活动xxx</a>
+							</h3>
+							<p class='meeting_tag'>
+
+								<a target="_blank" href="./activity_category.html">移动互联网</a>
+
+								<a target="_blank" href="./activity_category.html">大数据</a>
+
+								<a target="_blank" href="./activity_category.html">云计算</a>
+
+							</p>
+							<p class='meeting_des'>概述:2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，2016活动介绍，</p>
+							<p class='addr'>
+								<span>
+									<a href='/beijing/' target="_blank">
+										<font class='m_iconfont'>&#xe609;</font>北京
+									</a>
+								</span>
+								<span>
+									<font style='color: #8C8C8C; font-size: 16px;' class='m_iconfont'>&#xe608;&nbsp;</font>2016-07-28
+								</span>
+							</p>
+						</div>
+
+						<!--标准-->
+
+						<div class="col-sm-2 col-xs-2 price text-center">
+							<p>
+								<br />
+								<span>￥900.00</span>
+								<br />
+
+							</p>
+							<p>关注：30274人气</p>
+						</div>
+
+					</div>
+
+				</div><!-- end all meeting -->
+				
+				
+				
 			</div>
-		  </div>
-		</div>		
+			<div class=" content_right">
+				<div class="fixed_div content_right_child">
+
+					<div class="hot_theme">
+						<p class="">历史搜索</p>
+						<div id="hot_tags"  style="padding: 20px;">
+
+							<p><a>马拉松</a></p>
+							<p><a>马拉松</a></p>
+							<p><a>马拉松</a></p>
+							<p><a>马拉松</a></p>
+
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
 	</div>
 
 
-    <!--
-    <footer class="container-fluid text-center">
-    <div class="col-sm-2 col-xs-2">
-      <ul>
-        <li class="title"><h4>关于我们</h4></li>
-        <li><a href="#" rel="nofollow">公司简介</a></li>
-        <li><a href="#" rel="nofollow">媒体报道</a></li>
-        <li><a href="#" rel="nofollow">微信公众号</a></li>
-        <li><a href="#" rel="nofollow">APP下载</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-2 col-xs-2">
-      <ul>
-        <li class="title"><h4>更多服务</h4></li>
-        <li><a href="#" target="_blank" rel="nofollow">媒体合作</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">商务合作</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">友情链接</a></li>
-        <li><a href="#" target="_blank" rel="nofollow">在线留言</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-4 col-xs-4">
-      <ul>
-        <li class="title"><h4>联系我们</h4></li>
-        <li><span class="glyphicon glyphicon-phone"></span> (+86)186-0000-0000</li>
-        <li><span class="glyphicon glyphicon-map-marker"></span> 北京市海淀区中关村软件园</li> 
-      </ul>
-    </div>
-    <div class="col-sm-2 col-xs-2">
-      <p>微信公众号</p>
-      <img width="100" src="http://placehold.it/180x180" alt=""/>
-      <p style="color: #A0A8B7;font-size: 12px;padding: 5px">精彩活动及时推送<br/>查询更方便</p>
-    </div>
-    <div class="col-sm-2 col-xs-2">
-      <p>APP下载</p>
-      <img width="100" src="http://placehold.it/180x180" alt=""/>
-      <p style="color: #A0A8B7;font-size: 12px;padding: 5px">下载手机端APP<br/>随时随地报名参会</p>
-    </div>
-    </footer>
-    -->
-    
+
+
 	<!-- footer html template -->
-	<script>util.footerhtml();</script>
-   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  util.paginationhtml();
+  util.footerhtml()
+  </script>
+
+  <script src="./static/js/jquery-1.12.4.min.js"></script>
+  <script src="./static/js/bootstrap.min.js"></script>
+  <script src="./static/js/activityList.js"></script> 
+
+
+
+<script type="text/javascript">
+/// 右侧 停靠
+var right_child=$(".content_right").offset().top-66;// 减去固定导航栏高度66px
+var child_width=$(".content_right").width()
+$.event.add(window, "scroll", function() {
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop>=right_child){
+        $(".content_right_child").css({position:"fixed",top:"70px","z-index":"1000","width":child_width})
+    }else{
+        $(".content_right_child").css({position:"","width":'',"top":''})
+    }
+});
+
+
+</script>
 </body>
 </html>

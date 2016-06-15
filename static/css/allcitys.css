@@ -183,7 +183,7 @@ ol, ul {
 .allcitybk .search .input_in {
 	float: left;
 	text-align: left;
-	height: 20px;
+	height: 22px;
 	line-height: 20px;
 	margin-right: 2px;
 	padding: 1px 2px;
@@ -196,7 +196,7 @@ ol, ul {
 	left: 546px;
 	_left: 495px;
 	position: absolute;
-	top: 106px;
+	top: 108px;
 	width: 170px;
 	z-index: 9999;
 }
@@ -271,7 +271,7 @@ ol, ul {
 	background-color: #A9CEE0;
 	height: 33px;
 	font-weight: bold;
-    border-bottom: 2px solid #FF552E
+    border-bottom: 2px solid #00A2CA
 }
 
 .letterSelt .title02 .btnOn {
@@ -280,9 +280,9 @@ ol, ul {
 	line-height: 33px;
 	padding: 0 18px;
 	width: 160px;
-	border-left: 2px solid #FF552E;
-	border-right: 2px solid #FF552E;
-	border-top: 2px solid #FF552E;
+	border-left: 2px solid #00A2CA;
+	border-right: 2px solid #00A2CA;
+	border-top: 2px solid #00A2CA;
 	background-color: #fff; text-align : center;
 	cursor: hand;
 	display: block;
@@ -302,8 +302,8 @@ ol, ul {
 	line-height: 31px;
 	padding: 0 18px;
 	width: 158px;
-	border: 1px solid #FF552E;
-	border-bottom:2px solid #FF552E;
+	border: 1px solid #00A2CA;
+	border-bottom:2px solid #00A2CA;
 	background-color:#EBF5FC;
 	text-align: center;
 	display: block;

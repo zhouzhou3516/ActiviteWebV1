@@ -3,6 +3,50 @@
 .content div{
     padding: 0;
 }
+.search_T {width:100%;float:left;}
+.search_T .search_otherHd {width:100%;}
+.search_T .search_otherHd .K {width:75%;background-color:#FFF;border:2px solid #0099e9;height:46px;}
+.search_T .search_otherHd .K input {width:90%;}
+.search_T .search_otherHd a {float:left; width:25%}
+.search_T .search_Keyword {height:30px;line-height:30px;font-size:14px;color:#aaa;}
+.search_T .search_Keyword a {color:#aaa;margin-right:8px;}
+.search_T .search_Keyword a:hover {color:#0099e9;text-decoration: underline;}
+.search_fullHd {text-align:center;padding:120px 0;}
+.search_fullHd img {width:95px;height:95px;}
+.search_fullHd p {font-size:14px;color:#999;text-align:center;padding-top:30px;}
+
+.search_otherHd {overflow:hidden;padding:38px 0 0;}
+.search_otherHd .K {width:678px;height:44px;border-left:1px solid #d3d3d3;border-top:1px solid #d3d3d3;border-bottom:1px solid #d3d3d3;float:left;margin-left:0;}
+.search_otherHd .K input {
+	width: 460px;
+	/* height: 18px; */
+	border: none;
+	margin: 10px 20px;
+	font-size: 15px;
+	color: #666;
+}
+.search_otherHd .K input:FOCUS {
+	box-shadow:none !important;
+	border: none;
+	
+}
+
+.search_otherHd a {display:block;width:150px;height:46px;text-align:center;line-height:46px;background-color:#0099e9;color:#FFF;font-size:16px;float:left;}
+.search_otherHd a:hover {background-color: #0082c6;}
+
+.search_endTxt {overflow:hidden;line-height:46px;text-align:left;padding-left:20px;font-size:14px;color:#333;background-color:#f7fbfd;margin-bottom:20px;}
+.search_endTxt p span {color:#0099e9;}
+
+.content .search_result_msg{
+    float: left;
+    width: 100%;
+    height: 50px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    background: #eee;
+    padding: 15px;
+}
+
 
 .content .activity_title{
     background: #E7E7E7;
@@ -78,7 +122,7 @@ li{
     padding: 10px 0 10px 20px;
     display: none;
     border: 1px solid #eee; */
-    width: 470px;
+    width: 380px;
         padding: 0;
     margin: 0;
     z-index: 99998;
@@ -98,7 +142,7 @@ li{
     line-height: 35px;
 }
 .meeting_cat li a{
-    color: #7C8395 !important;
+    color: #000 !important;
     font-size: 14px;
 }
 .content .title div img{
@@ -168,7 +212,7 @@ li{
     padding: 20px;
 }
 .meeting_time .rencent a{
-    color: #7C8395 !important;
+    color: #000 !important;
     padding-right: 30px;
     font-size: 14px;
     padding-left: 6px;
@@ -178,15 +222,15 @@ li{
     border-bottom: 1px solid #D8D7DF;
     color: #000;
     font-size: 16px;
-    width: 16%;
-    text-align: center;
+    /* width: 16%; */
+    text-align: left;
     padding:10px 5px 3px;
     margin-bottom: 15px;
 }
 .meeting_time li a{
     font-size: 14px;
     color: #7C8395 !important;
-    padding-right: 28px;
+    padding-right: 10px;
     padding-left: 5px;
 }
 .calendar{
@@ -421,7 +465,7 @@ li{
     margin-bottom: 20px;
     border: 1px solid #eee \0;
 }
-.hot_theme p:first-child{
+.hot_theme>p:first-child{
     margin: 0;
     padding: 0 15px;
     color: #535A6C;
