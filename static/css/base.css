@@ -34,7 +34,7 @@ a:hover{
 /*background: #00A2CA;*/
 .nav{
     width: 100%;
-    background: #00A2CA;
+    background: #0099E9;
     height: 66px;
     /* position: relative; */
     z-index: 9990;
@@ -112,7 +112,7 @@ a:hover{
     color:#fff;
 }
 .nav .search{
-    width: 23%;
+    width: 18%;
     position: relative;
 }
 .nav .business{

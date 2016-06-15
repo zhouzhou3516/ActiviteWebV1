@@ -27,8 +27,9 @@ util.topnav=function(active_menu){
 					<li class="menue"><a href="./find_activity.html" >找活动</a></li>
 					<li class="menue"><a href="./activity_inprocess.html" >活动进行时</a></li>
 					<li class="menue"><a href="./viewpoint_list.html" >观点</a></li>
-					<li class="menue"><a href="./search_activity.html" >搜索活动</a></li>
-
+					<li class="search" >
+                    <form action="search_activity.html"><input name="keyword" type="text" placeholder="请输入活动关键字"/><span class="m-search m_iconfont">&#xe607;</span></form>
+                    </li>
 					<li class="login" ><a href="./login.html" rel="nofollow">
 							<span class="Login" style="font-size: 14px">登录</span>
 
