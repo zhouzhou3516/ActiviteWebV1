@@ -9,6 +9,12 @@
 	max-width:1200px;
 	max-height:500px;
 }
+.carousel-caption a{
+	color:#fff;
+}
+.carousel-caption:hover a{
+	color:#008000;
+}
 /*内容*/
 .content{
     padding-bottom: 50px;

@@ -67,7 +67,7 @@ a:hover{
     font-size: 16px;
 }
 .nav ul .menue:hover{
-    background: #388A9E;
+    background: #0382C5;
     cursor: pointer;
 }
 .nav ul .menue_right{
@@ -80,7 +80,7 @@ a:hover{
     -moz-border-radius: 20px;
     border-radius: 3px;
     border: none;
-    background: #047E9C;
+    background: #0382C5;
     width: 90%;
     color: #fff;
     padding-left: 10px;
@@ -116,7 +116,7 @@ a:hover{
     width: 21%;
     position: relative;
 }
-.nav .business{
+.nav .business,.findactivity{
     position: relative;
 }
 
@@ -139,20 +139,21 @@ a:hover{
 .fa-navicon:hover{
     color: #e7e7e7;
 }
-.business_menue{
+
+.business_menue,.findactivity_menue{
     position: absolute;
     top: 66px;
     left: 0;
-    width: 500px;
-    background: rgba(48,115,131,0.85);;
-    *background: rgba(48,115,131,0.85);;
-    -background: rgba(48,115,131,0.85);;
+    width: 450px;
+    background: rgba(3,130,197,0.88);
+    *background: rgba(3,130,197,0.88);
+    -background: rgba(3,130,197,0.88);
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
     color: #000;
     text-align: left;
-    padding: 15px 15px 15px 30px;
+    padding: 10px 10px 10px 20px;
     box-shadow: 0 0 7px 1px rgba(118, 118, 118, 0.44);
     /*visibility: hidden;*/
     display: none;
@@ -168,26 +169,30 @@ a:hover{
 .business:hover .business_menue{
     display: block;
 }
-.business_menue a{
+.findactivity:hover .findactivity_menue{
+    display: block;
+}
+.business_menue a , .findactivity_menue a{
     color: #fff !important;
+    font-size: 14px !important;
 }
 
-.business_menue>div{
+.business_menue>div,.findactivity_menue>div{
     padding: 0 !important;
     height: 30px;
     line-height: 30px;
     font-size: 16px;
 }
-.business_menue span{
+.business_menue span, .findactivity_menue span{
     padding: 0 !important;
 }
-.business_menue a{
-    color: #fff !important;
-    font-size: 14px !important;
-}
-.business_menue a:hover{
-    color: #0067B0 !important;
+
+.business_menue a:hover , .findactivity_menue a:hover{
+    color: #2090CB !important;
+    background: #fff;
     text-decoration: none !important;
+    padding: 1px 4px;
+    border-radius: 3px;
 }
 .login ol li a:hover{
     color: #0067B0 !important;
@@ -202,9 +207,9 @@ a:hover{
     line-height: 45px !important;
 }
 .industry,.time,.city{
-    margin: 5px 0;
-    height:40px !important;
-    line-height: 39px !important;
+    margin: 0px 0;
+    height:35px !important;
+    line-height: 34px !important;
 }
 .login{
     position: relative;

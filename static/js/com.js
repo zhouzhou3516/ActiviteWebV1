@@ -24,11 +24,13 @@ util.topnav=function(active_menu){
 						</a>
 						<div class="business_menue"></div></li>
 					<li class="menue "><a href="./index.html" >首页</a></li>
-					<li class="menue"><a href="./find_activity.html" >找活动</a></li>
+					<li class="menue findactivity"><a href="./find_activity.html" >找活动 <span class="fa fa-angle-down"></a>
+						<div class="findactivity_menue"></div>
+					</li>
 					<li class="menue"><a href="./activity_inprocess.html" >活动进行时</a></li>
 					<li class="menue"><a href="./viewpoint_list.html" >观点</a></li>
 					<li class="search">
-						<form action="./find_activity.html" methon="get"><input name="keyword" type="text" placeholder="搜索活动"><a href="./find_activity.html"><span class="m-search m_iconfont"></span></a></form>
+						<form action="./search_activity.html" methon="get"><input name="keyword" type="text" placeholder="搜索活动"><a href="./search_activity.html"><span class="m-search m_iconfont"></span></a></form>
 
 					</li>
 					<li class="login" ><a href="./login.html" rel="nofollow">
@@ -45,6 +47,7 @@ util.topnav=function(active_menu){
 		*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
 	document.write(html);
 	initNavCityMenu();
+	initFindActivityMenu();
 }
 //util.topnav();
 function initNavCityMenu(){
@@ -67,6 +70,40 @@ function initNavCityMenu(){
 		$(".business_menue").fadeOut(10)
 	});*/
 	document.querySelector(".business_menue").innerHTML=nav_city_menu_html;
+}
+function initFindActivityMenu(){
+	var nav_time = new Array("最近一月","最近一周","今天","明天","后天","更多...");
+	var nav_interest= new Array("科技","文化","生活","运动","社交","娱乐","互联网","教育","医疗","交通","金融","农业","工业","能源","环保","更多...");
+	var nav_city = new Array("beijing", "北京", "shanghai", "上海", "guangzhou",
+			"广州", "shenzhen", "深圳", "chengdu", "成都", "xian", "西安", "xiamen", "厦门",
+			"nanjing", "南京", "wuhan", "武汉", "chongqing", "重庆", "tianjin", "天津",
+			"changsha", "长沙", "gengduo", "更多...");
+	var nav_time_menu_html="<div class='col-sm-12 col-xs-12 city'>时间</div>";
+	for(i=0;i<nav_time.length;i=i+1){
+		
+		nav_time_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='./find_activity.html'>"+nav_time[i]+"</a></div>"
+	}
+	
+	var nav_interest_menu_html="<div class='col-sm-12 col-xs-12 city'>兴趣</div>";
+	for(i=0;i<nav_interest.length;i=i+1){
+		
+		nav_interest_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='./find_activity.html'>"+nav_interest[i]+"</a></div>"
+	}
+	
+	
+	
+	var nav_city_menu_html="<div class='col-sm-12 col-xs-12 city'>地区</div>";
+	//var  nav_city_menu_html="";
+	for(i=0;i<nav_city.length;i=i+2){
+			nav_city_menu_html+="<div class='col-sm-2 col-xs-2 '><a  href='./find_activity.html.html'>"+nav_city[i+1]+"</a></div>"
+	}
+	/*$(".business_menue").html(nav_city_menu_html)
+	$(".business").hover(function() {
+		$(".business_menue").fadeIn(10)
+	}, function() {
+		$(".business_menue").fadeOut(10)
+	});*/
+	document.querySelector(".findactivity_menue").innerHTML=nav_time_menu_html+nav_interest_menu_html+nav_city_menu_html;
 }
 
 //tooter html template two
