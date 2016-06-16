@@ -9,6 +9,7 @@
     
     <link href="./static/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/bootstrap-datepicker3.css">
 	<link rel="stylesheet" href="./static/css/activityList.css"/>
 	<link rel="stylesheet" href="./static/css/jqcloud.css" >
 
@@ -36,7 +37,7 @@
 			  <li><a href="#">今天</a></li>
 			  <li><a href="#">明天</a></li>
 			  <li><a href="#">后天</a></li>
-			  <li><a href="#">选择日期</a></li>
+			  <span class="date"><a href="#">选择日期</a></span>
 			</ul>
 			<ul class="list-inline">
 			  <span class="menu-head">兴趣：</span>
@@ -612,7 +613,7 @@ $.event.add(window, "scroll", function() {
 // 日期
 $('.date').datepicker({
   language: "zh-CN",
-  format: "dd",
+  format: "yyyy-mm-dd",
   autoclose: true,
 });
 
