@@ -46,6 +46,40 @@
 	  
 	  .menu-head {
 	    width: 5%;
+		font-weight: bold;
+		display: inline-block;
+		padding: 0 5px;
+		color:#5b6265
+	  }
+	  
+	  .dropdown2-menu {
+	    background: #eee;
+		padding: 6px 12px 3px;
+		border-radius: 5px;
+		margin-bottom: 10px;
+	  }
+
+	  .dropdown2-menu ul li a {
+	    color: #4a4a4a;
+	  }
+	  
+	  .dropdown2-menu ul li.active {
+	    background-color: #0099e9;
+		border-radius: 3px;
+	  }
+	
+	  
+	  .dropdown2-menu ul li.active a {
+	    color: white;
+	  }
+	  
+	  .dropdown2-menu ul li:hover {
+	    background-color: #0099e9;
+		border-radius: 3px;
+	  }
+	  
+	  .dropdown2-menu ul li:hover a {
+	    color: white;
 	  }
     </style>
   </head>
@@ -63,16 +97,16 @@
 		<div class="dropdown2-menu">
 		  <div class="menu">
 		    <ul class="list-inline">
-			  <li class="menu-head">时间：</li>
-			  <li><a href="#">全部</a></li>
+			  <span class="menu-head">时间：</span>
+			  <li class="active"><a href="#">全部</a></li>
 			  <li><a href="#">今天</a></li>
 			  <li><a href="#">明天</a></li>
 			  <li><a href="#">后天</a></li>
 			  <li><a href="#">选择日期</a></li>
 			</ul>
 			<ul class="list-inline">
-			  <li class="menu-head">兴趣：</li>
-			  <li><a href="#">全部</a></li>
+			  <span class="menu-head">兴趣：</span>
+			  <li class="active"><a href="#">全部</a></li>
 			  <li><a href="#">科技</a></li>
 			  <li><a href="#">文化</a></li>
 			  <li><a href="#">生活</a></li>
@@ -81,7 +115,7 @@
 			  <li><a href="#">娱乐</a></li>
 			  <li><a href="#">文化</a></li>
 			  <li><a href="#">生活</a></li>
-			  <li><a href="#category" data-toggle="collapse">更多</a></li>
+			  <span><a href="#category" data-toggle="collapse">更多>><!--<span class="caret"></span><!-- <span class="glyphicon glyphicon-menu-right" style="font-size: 10px;"></span> --></a></span>
 			</ul>
 			<div id="category" class="collapse">
 			  <ul class="list-inline">
@@ -97,8 +131,8 @@
 			  </ul>
 			</div>
 			<ul class="list-inline">
-			  <li class="menu-head">地区：</li>
-			  <li><a href="#">全部</a></li>
+			  <span class="menu-head">地区：</span>
+			  <li class="active"><a href="#">全部</a></li>
 			  <li><a href="#">北京</a></li>
 			  <li><a href="#">上海</a></li>
 			  <li><a href="#">深圳</a></li>
@@ -107,7 +141,7 @@
 			  <li><a href="#">重庆</a></li>
 			  <li><a href="#">上海</a></li>
 			  <li><a href="#">深圳</a></li>
-			  <li><a href="#city" data-toggle="collapse">更多</a></li>
+			  <span><a href="#category" data-toggle="collapse">更多>><!--<span class="caret"></span><!-- <span class="glyphicon glyphicon-menu-right" style="font-size: 10px;"></span> --></a></span>
 			</ul>
 			<div id="city" class="collapse">
 			  <ul class="list-inline">
@@ -123,7 +157,6 @@
 			  </ul>
 			</div>
 		  </div>
-		  <div id="
 		</div>
 		
 		<div class="btn-group" data-toggle="buttons">
