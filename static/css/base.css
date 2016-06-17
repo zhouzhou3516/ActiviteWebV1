@@ -34,7 +34,7 @@ body{
       
 .dropdown2-menu {
     background: #eee;
-    padding: 6px 12px 3px;
+    padding: 12px 12px 3px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -101,7 +101,7 @@ a:hover{
 
 .nav ul li a{
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
 }
 .nav ul .menue:hover{
     background: #0382C5;

@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 .meeting_cat h3 a,.meeting_cat span a{
-    color: #00A2CA !important;
+    color: #0099E9 !important;
     font-size: 22px;
     padding-right: 30px;
     padding-left: 0;
@@ -68,7 +68,7 @@
     /**width: 70%;*/
 }
 .meeting_cat h4 a{
-    color: #00A2CA  !important;
+    color: #0099E9  !important;
     font-size: 15px ;
     padding: 0 7px;
 }

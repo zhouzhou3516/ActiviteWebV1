@@ -144,3 +144,41 @@ $(function(){
    
 }); 
 
+//精彩回顾
+if($(".all_img li").length<=4){
+    $(".down").hide()
+}
+$(".down").click(function () {
+    var up_top=$(".all_img").css("marginTop")
+    var max_top=parseInt($(".all_img li").length-5)*94
+    if(parseInt(up_top)<=-max_top){
+        $(this).hide()
+    }
+    if(parseInt(up_top)>-max_top-94){
+        $(".all_img").animate({
+            marginTop:parseInt(up_top)-94+"px"
+        },200)
+        $(".up").show()
+    }
+})
+$(".up").click(function () {
+    var up_top=$(".all_img").css("marginTop")
+    if(parseInt(up_top)>=-94) {
+        $(this).hide()
+    }
+    if(parseInt(up_top)<0){
+        $(".all_img").animate({
+            marginTop:parseInt(up_top)+94+"px"
+        },200)
+        $(".down").show()
+    }
+})
+$(".all_img li").click(function (){
+    var j=$(".check").index();
+    var i=$(this).index();
+       $(this).append($(".check"))
+        $(".pic").removeClass("active").fadeOut(0)
+        $($(".pic")[i]).fadeIn(200).addClass("active")
+})
+
+//精彩回顾

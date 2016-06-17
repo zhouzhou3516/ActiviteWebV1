@@ -198,7 +198,9 @@ util.paginationhtml=function(){
     <ul>
              <li class="page_active"><a href="">1</a></li>
              <li><a href="#" >2</a></li>
-             <li><a href="#" >3</a></li>
+              <li><a href="#" >3</a></li>
+             ...
+              <li><a href="#" >10</a></li>
              <li><a href="#">下一页</a></li>
     </ul>
 </div>*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
@@ -211,6 +213,8 @@ util.paginationhtml2=function(){
              <li class="page_active"><a href="">1</a></li>
              <li><a href="#" >2</a></li>
              <li><a href="#" >3</a></li>
+              ...
+              <li><a href="#" >10</a></li>
              <li><a href="#">下一页</a></li>
     </ul>
 </div>*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
