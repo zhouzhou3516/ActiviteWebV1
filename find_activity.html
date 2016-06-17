@@ -16,6 +16,10 @@
     <script src="./static/js/com.js"></script>
   </head>
   <style>
+    .btn-group .active {
+      background-color: #00A2CA;
+      color: white;
+    }
   </style>
   <body>
 
@@ -108,6 +112,19 @@
           </ul>
         </div>
       </div>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新发布
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option2" autocomplete="off"> 最热点击
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option3" autocomplete="off"> 最多讨论
+        </label>
+      </div>
+    </div>
+    <div class="container">
 
       <div class="content_left">
         <div class="all_events" style="float: left;">
