@@ -6,6 +6,9 @@
 .bread_nav>a{
     color: #CACFDD;
 }
+.content{
+	min-height:700px
+}
 .content_left{
     padding: 0;
     position: relative;

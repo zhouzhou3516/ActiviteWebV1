@@ -64,13 +64,20 @@ $("#post").click(function () {
 
 
 /// 右侧 停靠
-var right_child=$(".content_right").offset().top-66;// 减去固定导航栏高度66px
-var child_width=$(".content_right").width()
+var right_child=$(".content_right").offset().top-65;// 减去固定导航栏高度66px
+var child_width=$(".content_right").width();
+var child_height=$(".content_right").height();
+var footer_top=$(".footer").offset().top;
 $.event.add(window, "scroll", function() {
-    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
-    if(sTop>=right_child){
-        $(".content_right_child").css({position:"fixed",top:"70px","z-index":"1000","width":child_width})
-    }else{
-        $(".content_right_child").css({position:"","width":'',"top":''})
+	var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+	var window_height=footer_top-sTop-75;// 75=导航栏 65 + 10 marging
+    if(sTop>=right_child && window_height>=child_height){
+        $(".content_right_child").css({position:"fixed",top:"70px","z-index":"1000","width":child_width});
+    }else if(window_height<child_height){
+    	 var top=footer_top-child_height-140;
+    	 $(".content_right_child").css({position:"absolute",top:top,"z-index":"1000","width":child_width})
+    }
+    else{
+    	 $(".content_right_child").removeAttr( 'style' );
     }
 });

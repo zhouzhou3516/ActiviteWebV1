@@ -347,7 +347,7 @@ li{
     background: #FFF;
     height: 183px;
     border-bottom: 1px solid #D8D7DF;
-    border-left: 4px solid rgba(105, 175, 250, 0);
+    border-right: 4px solid rgba(105, 175, 250, 0);
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
@@ -355,7 +355,7 @@ li{
     transition: all .3s linear;
 }
 .meeting_list:hover{
-    border-left: 4px solid #69AFFA;
+    border-right: 4px solid #0099E9;
     background: #F2F2F4;
 }
 .meeting_list:hover .meeting_name a{
