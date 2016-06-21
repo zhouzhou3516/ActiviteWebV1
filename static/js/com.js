@@ -196,10 +196,12 @@ util.paginationhtml=function(){
 	var html=(function(){/*
 	<div class="pagination">
     <ul>
+             <li><a href="#">上一页</a></li>
              <li class="page_active"><a href="">1</a></li>
              <li><a href="#" >2</a></li>
               <li><a href="#" >3</a></li>
-             ...
+              <li><a href="#">4</a></li>
+              <li><a href="#" disabled>...</a></li>
               <li><a href="#" >10</a></li>
              <li><a href="#">下一页</a></li>
     </ul>
@@ -210,10 +212,12 @@ util.paginationhtml2=function(){
 	var html=(function(){/*
 	<div class="pagination-full">
     <ul>
+             <li><a href="#">上一页</a></li>
              <li class="page_active"><a href="">1</a></li>
              <li><a href="#" >2</a></li>
-             <li><a href="#" >3</a></li>
-              ...
+              <li><a href="#" >3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#" disabled>...</a></li>
               <li><a href="#" >10</a></li>
              <li><a href="#">下一页</a></li>
     </ul>

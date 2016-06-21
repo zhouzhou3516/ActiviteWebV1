@@ -7,19 +7,19 @@
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-	<link href="./static/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="./static/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./static/css/base.css">
-	<link rel="stylesheet" href="./static/css/detail_activity.css">
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./static/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/detail_activity.css">
 
 
-	<script src="./static/js/com.js"></script>
+    <script src="./static/js/com.js"></script>
     <style>
 
-	  .btn-group .active {
-	    background-color: #0082C6;
-		color: white;
-	  }
+      .btn-group .active {
+        background-color: #0082C6;
+        color: white;
+      }
       .carousel-inner img {
         width: 100%; /* Set width to 100% */
         min-height: 200px;
@@ -47,33 +47,63 @@
   </head>
   <body>
 
-	<script>util.topnav();</script>
+    <script>util.topnav();</script>
 
     <div class="container">
       <ol class="breadcrumb">
         <li><a href="index.html">首页</a></li>
         <li><a href="viewpoint_list.html">观点</a></li>
-        <li class="active">文章标题</li>
+        <li><a href="activity_category.html">医疗</a></li>
+        <li class="active">医疗行业是中国移动互联网最后一个，也是最大的一个机会</li>
       </ol>
 
-
-       <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新发布
-           </label>
-           <label class="btn btn-default">
-             <input type="radio" name="options" id="option2" autocomplete="off"> 最热点击
-          </label>
-          <label class="btn btn-default">
-            <input type="radio" name="options" id="option3" autocomplete="off"> 最多讨论
-          </label>
+      <div class="dropdown2-menu">
+        <ul class="list-inline">
+          <span class="menu-head">兴趣：</span>
+          <li class="active"><a href="#">全部</a></li>
+          <li><a href="#">科技</a></li>
+          <li><a href="#">文化</a></li>
+          <li><a href="#">生活</a></li>
+          <li><a href="#">运动</a></li>
+          <li><a href="#">社交</a></li>
+          <li><a href="#">娱乐</a></li>
+          <li><a href="#">文化</a></li>
+          <li><a href="#">生活</a></li>
+          <span><a href="#category" data-toggle="collapse">更多>></a></span>
+        </ul>
+        <div id="category" class="collapse">
+          <ul class="list-inline">
+            <li class="menu-head"></li>
+            <li><a href="#">科技</a></li>
+            <li><a href="#">文化</a></li>
+            <li><a href="#">生活</a></li>
+            <li><a href="#">运动</a></li>
+            <li><a href="#">社交</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">文化</a></li>
+            <li><a href="#">生活</a></li>
+          </ul>
         </div>
+      </div>
+
+
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> 最新发布
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option2" autocomplete="off"> 最热点击
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="options" id="option3" autocomplete="off"> 最多讨论
+        </label>
+      </div>
 
 
 
       <div class="row">
         <div class="col-sm-12">
-        <h3>医疗行业是中国移动互联网最后一个，也是最大的一个机会</h3>
+          <h3>医疗行业是中国移动互联网最后一个，也是最大的一个机会</h3>
         </div>
       </div>
       <div class="row">
@@ -86,9 +116,73 @@
           <a href="#" class="text-muted"><span class="glyphicon glyphicon-heart-empty"></span> 喜欢(1)</a>
         </div>
       </div>
-	  <br />
+      <br />
+      <!--
       <div class="jumbotron">
         <div style="height: 300px;"></div>
+      </div>
+      -->
+      <div class="row">
+        <div class="col-sm-10">
+          <p style="padding-left:20px; padding-right: 20px; border-left: 5px solid #0099e9;">
+          互联网不断对医疗领域进行渗透，推动了医疗健康行业快速发展，带来诸多便捷的同时也带来了一系列问题：如何利用互联网让有限医疗资源发挥最大价值？如何高效率利用沉淀的医疗大数据？互联网变革中医疗健康的七寸在哪里？
+          </p>
+          <p>
+          4月16日，2016初橙•中国互联网医疗健康大会在杭州举行，来自互联网医疗领域的阿里校友投资人、创业者，以及行业协会等业内人士围绕“突围、创新、颠覆”的主题，分析互联网医疗健康的行业痛点，发掘未来新机遇。
+          </p>
+          <p class="text-center"><img src="./static/img/activity_sample2.jpg"></p>
+          <h4 style="padding: 10px 20px;border-left:5px solid #0099e9;">
+          浙江省健康服务促进会会长 朱耀传
+          </h4>
+          <p>
+          医疗服务业比较广，首先是医疗、中医药、健康管理等，信息化也是很重要的内容之一，当然还有保险、养老等。进入这个行业，不管从平台也好，具体项目也好，甚至具体某个技术、产品，都不是一蹴而就的。</p><br/><p>
+
+          医疗行业的保守为创业者提供了巨大创业机会，原因有三：</p><br/><p>
+
+          第一，中国医疗资源短缺，医疗服务业的分类又相当多，留给创业者的行业发展空间很大；</p><p>
+          第二，看病贵、看病难、看病烦是相对的，这些问题需要解决方案；</p><p>
+          第三，我国经济发展迅速，但医疗卫生系统发展相对滞后，尤其市场化非常滞后。
+          </p>
+          <br/>
+          <h4 style="padding: 10px 20px;border-left:5px solid #0099e9;">
+          浙江省健康服务促进会会长 朱耀传
+          </h4>
+          <p>
+          医疗服务业比较广，首先是医疗、中医药、健康管理等，信息化也是很重要的内容之一，当然还有保险、养老等。进入这个行业，不管从平台也好，具体项目也好，甚至具体某个技术、产品，都不是一蹴而就的。</p><br/><p>
+
+          医疗行业的保守为创业者提供了巨大创业机会，原因有三：</p><br/><p>
+
+          第一，中国医疗资源短缺，医疗服务业的分类又相当多，留给创业者的行业发展空间很大；</p><p>
+          第二，看病贵、看病难、看病烦是相对的，这些问题需要解决方案；</p><p>
+          第三，我国经济发展迅速，但医疗卫生系统发展相对滞后，尤其市场化非常滞后。
+          </p>
+          <br/>
+          <h4 style="padding: 10px 20px;border-left:5px solid #0099e9;">
+          浙江省健康服务促进会会长 朱耀传
+          </h4>
+          <p>
+          医疗服务业比较广，首先是医疗、中医药、健康管理等，信息化也是很重要的内容之一，当然还有保险、养老等。进入这个行业，不管从平台也好，具体项目也好，甚至具体某个技术、产品，都不是一蹴而就的。</p><br/><p>
+
+          医疗行业的保守为创业者提供了巨大创业机会，原因有三：</p><br/><p>
+
+          第一，中国医疗资源短缺，医疗服务业的分类又相当多，留给创业者的行业发展空间很大；</p><p>
+          第二，看病贵、看病难、看病烦是相对的，这些问题需要解决方案；</p><p>
+          第三，我国经济发展迅速，但医疗卫生系统发展相对滞后，尤其市场化非常滞后。
+          </p>
+          <br/>
+          <h4 style="padding: 10px 20px;border-left:5px solid #0099e9;">
+          浙江省健康服务促进会会长 朱耀传
+          </h4>
+          <p>
+          医疗服务业比较广，首先是医疗、中医药、健康管理等，信息化也是很重要的内容之一，当然还有保险、养老等。进入这个行业，不管从平台也好，具体项目也好，甚至具体某个技术、产品，都不是一蹴而就的。</p><br/><p>
+
+          医疗行业的保守为创业者提供了巨大创业机会，原因有三：</p><br/><p>
+
+          第一，中国医疗资源短缺，医疗服务业的分类又相当多，留给创业者的行业发展空间很大；</p><p>
+          第二，看病贵、看病难、看病烦是相对的，这些问题需要解决方案；</p><p>
+          第三，我国经济发展迅速，但医疗卫生系统发展相对滞后，尤其市场化非常滞后。
+          </p>
+        </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
@@ -131,7 +225,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h3>相关文章</h3>
-		  
+
           <ul>
             <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
             <li><a href="">移动医疗与传统医疗的关系探讨</a></li>
@@ -144,14 +238,14 @@
     </div>
 
 
-   <!-- footer html template -->
-	<script type="text/javascript">
-		util.footerhtml()
-	</script>
+    <!-- footer html template -->
+    <script type="text/javascript">
+      util.footerhtml()
+  </script>
 
-	<script src="./static/js/jquery-1.12.4.min.js"></script>
-	<script src="./static/js/bootstrap.min.js"></script>
-	<script src="./static/js/jquery.lazyload.min.js"></script>
-	<script src="./static/js/index.js"></script>
+  <script src="./static/js/jquery-1.12.4.min.js"></script>
+  <script src="./static/js/bootstrap.min.js"></script>
+  <script src="./static/js/jquery.lazyload.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </body>
 </html>
